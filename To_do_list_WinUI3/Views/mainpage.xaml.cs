@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml;
+﻿using Windows.UI.WindowManagement;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -14,9 +15,12 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
+using System.Threading.Tasks;
 using to_do_list_WinUI3;
+using To_do_list_WinUI3.Views;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Microsoft.UI.Xaml.Hosting;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -53,9 +57,9 @@ namespace To_do_list_WinUI3
             subtask_list.ItemsSource = SubTasks;
             number_repeat.MaxLength = 3;
 
-
+           
         }
-
+       
         private List<Process> GetProcessesWithWindow()
         {
             List<Process> processwithwindow = new List<Process>();
@@ -498,8 +502,11 @@ namespace To_do_list_WinUI3
 
         private void Play_task_Click(object sender, RoutedEventArgs e)
         {
+            (this as Window).Content = new Focus_Task();
+            (this as Window).Activate();
 
-            //this.Frame.Navigate(typeof(Focus_Task));
+
+
         }
         private void Circle_Checked(object sender, RoutedEventArgs e)
         {

@@ -29,29 +29,29 @@
     <AppXManifest Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-05-31T21:45:56.642</Modified>
+      <Modified>2022-06-07T14:00:08.490</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-05-31T21:45:56.454</Modified>
+      <Modified>2022-06-07T14:00:08.286</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.runtimeconfig.json">
       <PackagePath>To_do_list_WinUI3.runtimeconfig.json</PackagePath>
-      <Modified>2022-05-31T21:36:45.151</Modified>
+      <Modified>2022-06-07T13:29:48.839</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.dll">
       <PackagePath>To_do_list_WinUI3.dll</PackagePath>
-      <Modified>2022-05-31T21:45:56.383</Modified>
+      <Modified>2022-06-07T14:00:08.208</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>To_do_list_WinUI3.exe</PackagePath>
-      <Modified>2022-05-31T21:45:56.390</Modified>
+      <Modified>2022-06-07T14:00:08.208</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.deps.json">
       <PackagePath>To_do_list_WinUI3.deps.json</PackagePath>
-      <Modified>2022-05-31T21:36:45.054</Modified>
+      <Modified>2022-06-07T13:29:48.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\.nuget\packages\microsoft.netcore.app.runtime.win-x86\6.0.5\runtimes\win-x86\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

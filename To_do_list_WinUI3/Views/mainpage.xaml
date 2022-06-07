@@ -10,6 +10,7 @@
 
 
     <Grid>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -25,40 +26,40 @@
         <StackPanel Background="#04000E" Width="240"  Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" >
 
 
-            <ListView x:ConnectionId='64' Name="ListView_defaultlists"                                                           
-                      IsItemClickEnabled="True"                                            >
+            <ListView Name="ListView_defaultlists" SelectionChanged="ListView_defaultlists_SelectionChanged" 
+                      IsItemClickEnabled="True" ItemClick="ListView_defaultlists_ItemClick">
 
-                <ListViewItem x:ConnectionId='69'  Name="Today">
+                <ListViewItem  Name="Today">
                     <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
 
-                       
+                        <fa:SvgAwesome Icon="Regular_CalendarXmark"  Height="30" Width="20"  PrimaryColor="Fuchsia"  Margin="0,0,10,0"></fa:SvgAwesome>
                         <TextBlock Text="today" Foreground="White" FontSize="20"></TextBlock>
 
                     </StackPanel>
                 </ListViewItem>
 
-                <ListViewItem x:ConnectionId='70' Name="Tomorrow">
+                <ListViewItem Name="Tomorrow">
 
                     <StackPanel Orientation="Horizontal">
 
-                        <!--<fa:FontAwesome Icon="CalendarOutline"  FontSize="20" Foreground="Fuchsia" Margin="0,0,10,0"></fa:FontAwesome>-->
+                        <fa:SvgAwesome Icon="Regular_Calendar"  Height="30" Width="20"  PrimaryColor="Fuchsia"  Margin="0,0,10,0"></fa:SvgAwesome>
                         <TextBlock Text="Tomorrow" Foreground="White" FontSize="20"></TextBlock>
 
                     </StackPanel>
                 </ListViewItem>
 
-                <ListViewItem x:ConnectionId='71' Name="Planned">
+                <ListViewItem Name="Planned">
 
                     <StackPanel Orientation="Horizontal">
 
-                        <!--<fa:FontAwesome Icon="Calendar"  FontSize="20" Foreground="Fuchsia" Margin="0,0,10,0"></fa:FontAwesome>-->
+                        <fa:SvgAwesome Icon="Regular_CalendarDays" Height="30" Width="20"  PrimaryColor="Fuchsia"  Margin="0,0,10,0"></fa:SvgAwesome>
                         <TextBlock Text="planned" Foreground="White" FontSize="20"></TextBlock>
 
                     </StackPanel>
 
                 </ListViewItem>
 
-                <ListViewItem x:ConnectionId='72' Name="Tasks">
+                <ListViewItem Name="Tasks">
 
                     <StackPanel Orientation="Horizontal">
 
@@ -70,14 +71,14 @@
                 </ListViewItem >
 
             </ListView>
-            <ListView x:ConnectionId='65' Name="ListView_tasklists"                                                       
-                      IsItemClickEnabled="True"                                         >
+            <ListView Name="ListView_tasklists" SelectionChanged="ListView_tasklists_SelectionChanged"
+                      IsItemClickEnabled="True" ItemClick="ListView_tasklists_ItemClick">
 
                 <ListView.ItemTemplate>
-                    <DataTemplate                      >
-                        <StackPanel x:ConnectionId='67' Orientation="Horizontal">
-                            <!--<fa:FontAwesome Icon="List" Foreground="Fuchsia" Margin="0,0,10,0"></fa:FontAwesome>-->
-                            <TextBlock x:ConnectionId='68'                 ></TextBlock>
+                    <DataTemplate x:DataType="x:String">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:SvgAwesome Icon="Solid_List" Height="30" Width="20" PrimaryColor="Fuchsia" Margin="0,0,10,0"></fa:SvgAwesome>
+                            <TextBlock Text="{x:Bind}" ></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -86,42 +87,41 @@
 
         </StackPanel>
 
-        <TextBox x:ConnectionId='2' x:Name="Add_list_texbox"                                   Grid.Row="1" HorizontalAlignment="Left" Grid.Column="0"  PlaceholderText="+ add a list" Style="{StaticResource TextBoxStyle1}"  Background="#04000E" Foreground="White" Height="50" Width="240"></TextBox>
+        <TextBox x:Name="Add_list_texbox" KeyDown="Add_list_texbox_KeyDown" Grid.Row="1" HorizontalAlignment="Left" Grid.Column="0"  PlaceholderText="+ add a list" Style="{StaticResource TextBoxStyle1}"  Background="#04000E" Foreground="White" Height="50" Width="240"></TextBox>
 
-        <TextBox x:ConnectionId='3' x:Name="add_Task_textbox" Grid.Row="1" Grid.Column="1" Margin="30,0,0,20"                                    
-                                                        BorderThickness="0"   
+        <TextBox x:Name="add_Task_textbox" Grid.Row="1" Grid.Column="1" Margin="30,0,0,20" KeyDown="add_Task_textbox_KeyDown "
+                 LostFocus="add_Task_textbox_LostFocus" BorderThickness="0"   
                  PlaceholderText="+ add a task" 
                  Background="#04000E" Foreground="White" Height="40" Width="1000" Style="{StaticResource TextBoxStyle1}" />
 
 
-        <ListView x:ConnectionId='4' x:Name="task_list"                                 IsItemClickEnabled="True" Grid.Row="0" Grid.Column="1"  Background="Transparent"
-                  Padding="15" Margin="25,0,0,0"                                                >
+        <ListView x:Name="task_list" ItemClick="task_list_ItemClick" IsItemClickEnabled="True" Grid.Row="0" Grid.Column="1"  Background="Transparent"
+                  Padding="15" Margin="25,0,0,0" SelectionChanged="task_list_SelectionChanged"  >
 
             <ListView.HeaderTemplate>
-                <DataTemplate                       >
-                    <TextBlock x:ConnectionId='59'  FontSize="30" HorizontalAlignment="Center"                 ></TextBlock>
+                <DataTemplate  x:DataType="x:String">
+                    <TextBlock  FontSize="30" HorizontalAlignment="Center" Text="{x:Bind }"></TextBlock>
                 </DataTemplate>
             </ListView.HeaderTemplate>
 
             <ListView.ItemTemplate>
 
-                <DataTemplate                             >
+                <DataTemplate x:DataType="local1:TaskTodo">
 
                     <RelativePanel >
-                        <RadioButton x:ConnectionId='62'  Name="Circle"  RelativePanel.AlignLeftWithPanel="True"
+                        <RadioButton  Name="Circle"  RelativePanel.AlignLeftWithPanel="True"
                                       Style="{StaticResource RadioButtonStyle1}"
-                                                              >
+                                      Checked="Circle_Checked">
                         </RadioButton>
                         <TextBlock Foreground ="White" Text="{Binding NameTask}"
                             RelativePanel.RightOf="Circle"/>
 
-                        <Button x:ConnectionId='63' Name="Play_task" Background="Transparent"
+                        <Button Name="Play_task" Background="Transparent"
                                 RelativePanel.AlignRightWithPanel="True" BorderThickness="0" 
-                                                        >
-                            <!--<fa:FontAwesome Name="Play" Icon="Play" Foreground="Fuchsia" >
+                                Click="Play_task_Click"
+                                >
 
-                            </fa:FontAwesome>-->
-                            
+                            <fa:SvgAwesome Icon="Regular_CirclePlay" Width="20" Height="20" PrimaryColor="Fuchsia"></fa:SvgAwesome>
                             
 
                         </Button>
@@ -139,19 +139,19 @@
             </ListView.ItemContainerStyle>
         </ListView>
 
-        <StackPanel x:ConnectionId='5' Name="TaskForm"  Grid.Column="2" Width="340" Background="#04000E" HorizontalAlignment="Right" Visibility="Collapsed" >
-            <Button x:ConnectionId='6' FontSize="20" Name="quit_TaskForm" Content="x"                             HorizontalAlignment="Right" Background="Transparent"></Button>
+        <StackPanel Name="TaskForm"  Grid.Column="2" Width="340" Background="#04000E" HorizontalAlignment="Right" Visibility="Collapsed" >
+            <Button FontSize="20" Name="quit_TaskForm" Content="x" Click="quit_TaskForm_Click" HorizontalAlignment="Right" Background="Transparent"></Button>
 
-            <TextBox x:ConnectionId='7' Name="NameTaskForm" HorizontalAlignment="Center" FontSize="20" 
-                                                            Foreground="White" 
+            <TextBox Name="NameTaskForm" HorizontalAlignment="Center" FontSize="20" 
+                     TextChanged="NameTaskForm_TextChanged" Foreground="White" 
                      DataContext="{Binding ElementName=task_list, Path=SelectedItem}" 
                      Text="{Binding Path=NameTask}"
                      Style="{StaticResource TextBoxStyle1}" BorderThickness="0"/>
 
-            <Popup x:ConnectionId='8' Name="calendar_popup"  IsOpen="False">
+            <Popup Name="calendar_popup"  IsOpen="False">
                 <StackPanel BorderBrush="#08090A">
 
-                    <CalendarView x:ConnectionId='55' Name="calendar_date"  CalendarItemBackground="#151513"></CalendarView>
+                    <CalendarView Name="calendar_date"  CalendarItemBackground="#151513"></CalendarView>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -166,19 +166,19 @@
                             <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
 
-                        <Button x:ConnectionId='56' Content="save"                    Grid.Column="0" Background="#1EAE70" Width="150"></Button>
-                        <Button x:ConnectionId='57' Name="cancel_button" Content="cancel" Grid.Column="1" Background="#08090A" Width="150"                     ></Button>
+                        <Button Content="save" Click="save_Click" Grid.Column="0" Background="#1EAE70" Width="150"></Button>
+                        <Button Name="cancel_button" Content="cancel" Grid.Column="1" Background="#08090A" Width="150" Click="cancel_Click"></Button>
                     </Grid>
 
                 </StackPanel>
 
             </Popup>
 
-            <Popup x:ConnectionId='9' Name="reminder_popup"  IsOpen="False">
+            <Popup Name="reminder_popup"  IsOpen="False">
                 <StackPanel BorderBrush="#08090A">
 
-                    <CalendarView x:ConnectionId='51' Name="reminder_calendar" CalendarItemBackground="#151513"></CalendarView>
-                    <TimePicker x:ConnectionId='52' Name="reminder_time_picker" Width="295" Background="#151513"></TimePicker>
+                    <CalendarView Name="reminder_calendar" CalendarItemBackground="#151513"></CalendarView>
+                    <TimePicker Name="reminder_time_picker" Width="295" Background="#151513"></TimePicker>
 
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -193,8 +193,8 @@
                             <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
 
-                        <Button x:ConnectionId='53' Name="reminder_save"                             Content="save"  Grid.Column="0" Grid.Row="1" Background="#1EAE70" Width="148"></Button>
-                        <Button x:ConnectionId='54'  Name="reminder_cancel"                               Content="cancel" Grid.Column="1" Grid.Row="1" Background="#08090A" Width="148" ></Button>
+                        <Button Name="reminder_save" Click="reminder_save_Click" Content="save"  Grid.Column="0" Grid.Row="1" Background="#1EAE70" Width="148"></Button>
+                        <Button  Name="reminder_cancel" Click="reminder_cancel_Click" Content="cancel" Grid.Column="1" Grid.Row="1" Background="#08090A" Width="148" ></Button>
                     </Grid>
 
                 </StackPanel>
@@ -202,18 +202,18 @@
             </Popup>
 
 
-            <StackPanel x:ConnectionId='10' Name="listView_FormData" >
+            <StackPanel Name="listView_FormData" >
 
 
-                <Button x:ConnectionId='18' Name="Calendar_Button"                           Background="Transparent" BorderThickness="0">
+                <Button Name="Calendar_Button" Click="calendar_button"   Background="Transparent" BorderThickness="0">
                     <Grid >
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                             <ColumnDefinition Width="auto"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
-                        <!--<fa:FontAwesome Grid.Column="0" Icon="Calendar" FontSize="20" Foreground="Fuchsia" ></fa:FontAwesome>-->
-                        <TextBlock x:ConnectionId='50'  x:Name="DueDateTexblock" x:Uid="DueDateTexblock" Foreground="White"
+                        <fa:SvgAwesome Grid.Column="0" Icon="Regular_CalendarDays" Height="20" Width="20" PrimaryColor="Fuchsia" Margin="0,0,10,0" ></fa:SvgAwesome>
+                        <TextBlock  x:Name="DueDateTexblock" x:Uid="DueDateTexblock" Foreground="White"
                                     Grid.Column="1"  FontSize="20"
                                     DataContext="{Binding ElementName=task_list, Path=SelectedItem}"
                                     Text="{Binding Path=FormatDate}">
@@ -224,7 +224,7 @@
                     </Grid>
                 </Button>
 
-                <Button x:ConnectionId='19' Name="reminder_button"                               Background="Transparent" BorderThickness="0">
+                <Button Name="reminder_button" Click="reminder_button_Click" Background="Transparent" BorderThickness="0">
 
                     <Grid>
 
@@ -238,15 +238,15 @@
                             <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
 
-                        <!--<fa:FontAwesome Grid.Column="0" Grid.Row="0" Icon="ClockOutline" FontSize="20" Foreground="Fuchsia" ></fa:FontAwesome>-->
-                        <TextBlock x:ConnectionId='48' Name="Reminder_time" x:Uid="Reminder_time" Grid.Column="1" Grid.Row="0"
+                        <fa:SvgAwesome Icon="Regular_Clock" Width="20" Height="20" PrimaryColor="Fuchsia" Margin="0,0,10,0" ></fa:SvgAwesome>
+                        <TextBlock Name="Reminder_time" x:Uid="Reminder_time" Grid.Column="1" Grid.Row="0"
 								    FontSize="18"
                                     DataContext="{Binding ElementName=task_list, Path=SelectedItem}"
                                     Text="{Binding Path=FormatTimeReminder}">
 
                         </TextBlock>
 
-                        <TextBlock x:ConnectionId='49' Name="Reminder_date" Grid.Column="1" Grid.Row="1"
+                        <TextBlock Name="Reminder_date" Grid.Column="1" Grid.Row="1"
                                     FontSize="15" 
                                     DataContext="{Binding ElementName=task_list, Path=SelectedItem}"
                                     Text="{Binding Path=FormatDateReminder}">
@@ -262,29 +262,31 @@
                     </Grid.ColumnDefinitions>
 
                    
-                    <TextBox x:ConnectionId='47' Name="Name_list"                                      
+                    <TextBox Name="Name_list"  TextChanged="list_name_TextChanged" 
                              Grid.Column="1"  BorderThickness="0" BorderBrush="Transparent" Background="Transparent" 
 							 DataContext="{Binding ElementName=task_list, Path=SelectedItem}"
                              Text="{Binding Path=ListName}" 
                              FontSize="20" Style="{StaticResource TextBoxStyle1}"
-                                                                  
-                                                            
-                                                        
+                             TextChanging="Name_list_TextChanging"
+                             LostFocus="Name_list_LostFocus"
+                             KeyDown="Name_list_KeyDown"
                              
                              >
 
                     </TextBox>
 
+                    <fa:SvgAwesome Icon="Solid_List" Width="20" Height="20" PrimaryColor="Fuchsia" ></fa:SvgAwesome>
+
                 </Grid>
-                <ListBox x:ConnectionId='20' Name="Lists_listbox" Visibility="Collapsed" Background="#04000E" 
-                                                                          
+                <ListBox Name="Lists_listbox" Visibility="Collapsed" Background="#04000E" 
+                         SelectionChanged="Lists_listbox_SelectionChanged"
                          
                          
                        >
 
                 </ListBox>
 
-                <Grid x:ConnectionId='21' Name="repeat_grid">
+                <Grid Name="repeat_grid">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"></ColumnDefinition>
                         <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -296,19 +298,19 @@
 
                     </Grid.RowDefinitions>
 
-                    <!--<fa:FontAwesome Grid.Column="0"  Icon="Repeat" FontSize="20" Foreground="Fuchsia" ></fa:FontAwesome>-->
+                    <fa:SvgAwesome Grid.Column="0"  Icon="Solid_Repeat" Width="20" Height="20" PrimaryColor="Fuchsia" ></fa:SvgAwesome>
 
-                    <Button x:ConnectionId='25' Name="repeat_button" Grid.Column="1"  Content="Repeat"                             
+                    <Button Name="repeat_button" Grid.Column="1"  Content="Repeat" Click="repeat_button_Click" 
                             Background="Transparent"  FontSize="20"></Button>
 
-                    <Popup x:ConnectionId='26' Name="repeat_options_popup"  Grid.Column="2" Grid.Row="1">
-                        <ListView x:ConnectionId='41' Background="#08090A" Width="210" Height="200" Name="Repeat_options"                                              >
+                    <Popup Name="repeat_options_popup"  Grid.Column="2" Grid.Row="1">
+                        <ListView Background="#08090A" Width="210" Height="200" Name="Repeat_options" SelectionChanged="ListView_SelectionChanged" >
 
-                            <TextBlock x:ConnectionId='42' Name = "Daily"  Text = "Daily" ></TextBlock>
-                            <TextBlock x:ConnectionId='43' Name = "Weekly" Text = "Weekly"></TextBlock>
-                            <TextBlock x:ConnectionId='44' Name = "Montly" Text = "Montly"></TextBlock>
-                            <TextBlock x:ConnectionId='45' Name = "Yearly" Text = "Yearly"></TextBlock>
-                            <TextBlock x:ConnectionId='46' Name = "Custom" Text = "Custom"></TextBlock>
+                            <TextBlock Name = "Daily"  Text = "Daily" ></TextBlock>
+                            <TextBlock Name = "Weekly" Text = "Weekly"></TextBlock>
+                            <TextBlock Name = "Montly" Text = "Montly"></TextBlock>
+                            <TextBlock Name = "Yearly" Text = "Yearly"></TextBlock>
+                            <TextBlock Name = "Custom" Text = "Custom"></TextBlock>
 
 
                         </ListView>
@@ -316,7 +318,7 @@
 
                     </Popup>
 
-                    <Popup x:ConnectionId='27' x:Name="custom_repeat_popup" Grid.Column="0" Grid.Row="1">
+                    <Popup x:Name="custom_repeat_popup" Grid.Column="0" Grid.Row="1">
 
                         <StackPanel Background="#08090A">
 
@@ -339,22 +341,22 @@
                                 </Grid.RowDefinitions>
 
                                 <TextBlock Text="Repeat every ..." Grid.Row="0" Grid.Column="0"></TextBlock>
-                                <TextBox x:ConnectionId='35'  Name="number_repeat"                                                       Grid.Column="0" Grid.Row="1" Text="1" BorderThickness="0" Width="70" HorizontalAlignment="Right" Style="{StaticResource TextBoxStyle1}"  />
+                                <TextBox  Name="number_repeat" BeforeTextChanging="number_repeat_BeforeTextChanging" Grid.Column="0" Grid.Row="1" Text="1" BorderThickness="0" Width="70" HorizontalAlignment="Right" Style="{StaticResource TextBoxStyle1}"  />
 
-                                <ComboBox x:ConnectionId='36' x:Name="custom_repeat_combobox" Grid.Row="1" Grid.Column="1" Width="125" HorizontalAlignment="Left"                                                           >
-                                    <ComboBoxItem x:ConnectionId='37' Name="DaysComboBox"   Content="days"></ComboBoxItem>
-                                    <ComboBoxItem x:ConnectionId='38' Name="WeeksComboBox"  Content="weeks"></ComboBoxItem>
-                                    <ComboBoxItem x:ConnectionId='39' Name="MonthsComboBox" Content="months"></ComboBoxItem>
-                                    <ComboBoxItem x:ConnectionId='40' Name="YearsComboBox"  Content="years"></ComboBoxItem>
+                                <ComboBox x:Name="custom_repeat_combobox" Grid.Row="1" Grid.Column="1" Width="125" HorizontalAlignment="Left" SelectionChanged="custom_repeat_combobox_SelectionChanged">
+                                    <ComboBoxItem Name="DaysComboBox"   Content="days"></ComboBoxItem>
+                                    <ComboBoxItem Name="WeeksComboBox"  Content="weeks"></ComboBoxItem>
+                                    <ComboBoxItem Name="MonthsComboBox" Content="months"></ComboBoxItem>
+                                    <ComboBoxItem Name="YearsComboBox"  Content="years"></ComboBoxItem>
                                 </ComboBox>
 
                             </Grid>
 
-                            <CalendarView x:ConnectionId='28'  x:Name="custom_month_calendar"  Visibility="Collapsed" FontSize="4" DayItemFontSize="15" SelectionMode="Multiple" />
+                            <CalendarView  x:Name="custom_month_calendar"  Visibility="Collapsed" FontSize="4" DayItemFontSize="15" SelectionMode="Multiple" />
 
 
-                            <StackPanel x:ConnectionId='29' Name="week_calendar" Visibility="Collapsed" >
-                                <GridView x:ConnectionId='33' SelectionMode="Multiple" IsMultiSelectCheckBoxEnabled="False"                                                >
+                            <StackPanel Name="week_calendar" Visibility="Collapsed" >
+                                <GridView SelectionMode="Multiple" IsMultiSelectCheckBoxEnabled="False" SelectionChanged="GridView_SelectionChanged"   >
 
                                     <TextBlock Text="Mo"></TextBlock>
                                     <TextBlock Text="Tu"></TextBlock>
@@ -364,7 +366,7 @@
 
                                 </GridView>
 
-                                <GridView x:ConnectionId='34' SelectionMode="Multiple" IsMultiSelectCheckBoxEnabled="False"                                             >
+                                <GridView SelectionMode="Multiple" IsMultiSelectCheckBoxEnabled="False" SelectionChanged="GridView_SelectionChanged">
 
                                     <TextBlock Text="Sa"></TextBlock>
                                     <TextBlock Text="Su"></TextBlock>
@@ -375,7 +377,7 @@
                             </StackPanel>
 
 
-                            <Grid x:ConnectionId='30' HorizontalAlignment="Center" Name="buttons_repeat_grid" Margin="10,15,0,10" Padding="5">
+                            <Grid HorizontalAlignment="Center" Name="buttons_repeat_grid" Margin="10,15,0,10" Padding="5">
 
                                 <Grid.ColumnDefinitions>
 
@@ -391,8 +393,8 @@
 
                                 </Grid.RowDefinitions>
 
-                                <Button x:ConnectionId='31' Content="save" Name="save_repeat" Grid.Column="0"                            Background="#1EAE70" Width="100" Margin="0,0,10,0"></Button>
-                                <Button x:ConnectionId='32' Name="cancel_repeat" Content="cancel" Grid.Column="1"                              Background="#151513" Width="100" ></Button>
+                                <Button Content="save" Name="save_repeat" Grid.Column="0" Click="save_repeat_Click"  Background="#1EAE70" Width="100" Margin="0,0,10,0"></Button>
+                                <Button Name="cancel_repeat" Content="cancel" Grid.Column="1" Click="cancel_repeat_Click"  Background="#151513" Width="100" ></Button>
                             </Grid>
 
                         </StackPanel>
@@ -415,37 +417,40 @@
                     
                     <TextBlock Margin="0,0,10,0" Grid.Column="1" Text=" Priority"  FontSize="20"></TextBlock>
 
-                    <RadioButton x:ConnectionId='22' Name="low"                                    Grid.Column="2"                                     ></RadioButton>
-                    <RadioButton x:ConnectionId='23' Name="medium"                                 Grid.Column="4"                                     ></RadioButton>
-                    <RadioButton x:ConnectionId='24' Name="high"                                   Grid.Column="6"                                    ></RadioButton>
+                    <RadioButton Name="low"    Click="priority_checkbox_click" Grid.Column="2"  Checked="Proritycheckbox_Checked"  ></RadioButton>
+                    <RadioButton Name="medium" Click="priority_checkbox_click" Grid.Column="4"  Checked="Proritycheckbox_Checked"  ></RadioButton>
+                    <RadioButton Name="high"   Click="priority_checkbox_click" Grid.Column="6"  Checked="Proritycheckbox_Checked" ></RadioButton>
 
-                    
+                    <fa:SvgAwesome Grid.Column="3"  Margin="0,0,10,0"  Icon="Regular_Flag"  Width="20" Height="20" PrimaryColor="Green"  ></fa:SvgAwesome>
+                    <fa:SvgAwesome Grid.Column="5"  Margin="0,0,10,0"  Icon="Regular_Flag"  Width="20" Height="20" PrimaryColor="Yellow"  ></fa:SvgAwesome>
+                    <fa:SvgAwesome Grid.Column="7"  Margin="0,0,10,0"  Icon="Regular_Flag"  Width="20" Height="20" PrimaryColor="red"  ></fa:SvgAwesome>
+
 
                 </Grid>
 
             </StackPanel>
 
             <TextBlock  Text="Subtasks" FontSize="20" HorizontalAlignment="Center" ></TextBlock>
-            <TextBox x:ConnectionId='11' HorizontalAlignment="Center" Width="300" Background="Transparent" PlaceholderText="add subtask"                           Style="{StaticResource TextBoxStyle1}" Grid.Column="1" x:Name="SubTask_TexBox" />
+            <TextBox HorizontalAlignment="Center" Width="300" Background="Transparent" PlaceholderText="add subtask" KeyDown="SubTask_KeyDown" Style="{StaticResource TextBoxStyle1}" Grid.Column="1" x:Name="SubTask_TexBox" />
 
-            <ListView x:ConnectionId='12'  Name="subtask_list">
+            <ListView  Name="subtask_list">
 
                 <ListView.ItemTemplate>
-                    <DataTemplate                             >
-                        <StackPanel x:ConnectionId='15' Orientation="Horizontal">
-                            <RadioButton x:ConnectionId='16' Name="subtaskdone_radiobutton" 
+                    <DataTemplate x:DataType="local1:TaskTodo">
+                        <StackPanel Orientation="Horizontal">
+                            <RadioButton Name="subtaskdone_radiobutton" 
                                          Style="{StaticResource RadioButtonStyle1}" 
-                                                                                  ></RadioButton>
-                            <TextBlock x:ConnectionId='17' Width="100" Foreground="White"                         />
+                                         Checked="subtaskdone_radiobutton_Checked"></RadioButton>
+                            <TextBlock Width="100" Foreground="White" Text="{x:Bind NameTask}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
 
             </ListView>
 
-            <TextBox x:ConnectionId='13' Style="{StaticResource TextBoxStyle1}" 
+            <TextBox Style="{StaticResource TextBoxStyle1}" 
                      DataContext="{Binding ElementName=task_list, Path=SelectedItem}"  Text="{Binding Path=Description}" 
-                     HorizontalAlignment="Center" Margin="0,30,0,0"  Name="descriptions_textbox"                                                 PlaceholderText="Add a note" Width="300" TextWrapping="Wrap"></TextBox>
+                     HorizontalAlignment="Center" Margin="0,30,0,0"  Name="descriptions_textbox"  TextChanged="descriptions_textbox_TextChanged" PlaceholderText="Add a note" Width="300" TextWrapping="Wrap"></TextBox>
 
         </StackPanel>
 
@@ -453,4 +458,3 @@
     </Grid>
 
 </Window>
-

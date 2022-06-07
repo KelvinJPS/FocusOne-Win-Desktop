@@ -224,37 +224,43 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[14];
+            _typeNameTable = new string[17];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Boolean";
-            _typeNameTable[4] = "FontAwesome6.Svg.SvgAwesome";
-            _typeNameTable[5] = "Microsoft.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[6] = "Microsoft.UI.Xaml.Media.Brush";
-            _typeNameTable[7] = "FontAwesome6.EFontAwesomeIcon";
-            _typeNameTable[8] = "System.Enum";
-            _typeNameTable[9] = "System.ValueType";
-            _typeNameTable[10] = "Double";
-            _typeNameTable[11] = "FontAwesome6.EFlipOrientation";
-            _typeNameTable[12] = "To_do_list_WinUI3.MainWindow";
-            _typeNameTable[13] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[4] = "To_do_list_WinUI3.Views.Focus_Task";
+            _typeNameTable[5] = "Microsoft.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "Microsoft.UI.Xaml.Controls.UserControl";
+            _typeNameTable[7] = "FontAwesome6.Svg.SvgAwesome";
+            _typeNameTable[8] = "Microsoft.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[9] = "FontAwesome6.EFontAwesomeIcon";
+            _typeNameTable[10] = "System.Enum";
+            _typeNameTable[11] = "System.ValueType";
+            _typeNameTable[12] = "Microsoft.UI.Xaml.Media.Brush";
+            _typeNameTable[13] = "Double";
+            _typeNameTable[14] = "FontAwesome6.EFlipOrientation";
+            _typeNameTable[15] = "To_do_list_WinUI3.MainWindow";
+            _typeNameTable[16] = "Microsoft.UI.Xaml.Window";
 
-            _typeTable = new global::System.Type[14];
+            _typeTable = new global::System.Type[17];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::System.Boolean);
-            _typeTable[4] = typeof(global::FontAwesome6.Svg.SvgAwesome);
-            _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
-            _typeTable[6] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
-            _typeTable[7] = typeof(global::FontAwesome6.EFontAwesomeIcon);
-            _typeTable[8] = typeof(global::System.Enum);
-            _typeTable[9] = typeof(global::System.ValueType);
-            _typeTable[10] = typeof(global::System.Double);
-            _typeTable[11] = typeof(global::FontAwesome6.EFlipOrientation);
-            _typeTable[12] = typeof(global::To_do_list_WinUI3.MainWindow);
-            _typeTable[13] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[4] = typeof(global::To_do_list_WinUI3.Views.Focus_Task);
+            _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
+            _typeTable[7] = typeof(global::FontAwesome6.Svg.SvgAwesome);
+            _typeTable[8] = typeof(global::Microsoft.UI.Xaml.Controls.ContentControl);
+            _typeTable[9] = typeof(global::FontAwesome6.EFontAwesomeIcon);
+            _typeTable[10] = typeof(global::System.Enum);
+            _typeTable[11] = typeof(global::System.ValueType);
+            _typeTable[12] = typeof(global::Microsoft.UI.Xaml.Media.Brush);
+            _typeTable[13] = typeof(global::System.Double);
+            _typeTable[14] = typeof(global::FontAwesome6.EFlipOrientation);
+            _typeTable[15] = typeof(global::To_do_list_WinUI3.MainWindow);
+            _typeTable[16] = typeof(global::Microsoft.UI.Xaml.Window);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -290,8 +296,9 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
         }
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
-        private object Activate_4_SvgAwesome() { return new global::FontAwesome6.Svg.SvgAwesome(); }
-        private object Activate_12_MainWindow() { return new global::To_do_list_WinUI3.MainWindow(); }
+        private object Activate_4_Focus_Task() { return new global::To_do_list_WinUI3.Views.Focus_Task(); }
+        private object Activate_7_SvgAwesome() { return new global::FontAwesome6.Svg.SvgAwesome(); }
+        private object Activate_15_MainWindow() { return new global::To_do_list_WinUI3.MainWindow(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -330,11 +337,26 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
                 xamlType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  FontAwesome6.Svg.SvgAwesome
+            case 4:   //  To_do_list_WinUI3.Views.Focus_Task
+                userType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_Focus_Task;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Microsoft.UI.Xaml.Controls.Page
+                xamlType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  Microsoft.UI.Xaml.Controls.UserControl
+                xamlType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  FontAwesome6.Svg.SvgAwesome
                 userType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_4_SvgAwesome;
-                userType.AddMemberName("PrimaryColor");
+                userType.Activator = Activate_7_SvgAwesome;
                 userType.AddMemberName("Icon");
+                userType.AddMemberName("PrimaryColor");
                 userType.AddMemberName("Spin");
                 userType.AddMemberName("SpinDuration");
                 userType.AddMemberName("Pulse");
@@ -348,15 +370,11 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 5:   //  Microsoft.UI.Xaml.Controls.ContentControl
+            case 8:   //  Microsoft.UI.Xaml.Controls.ContentControl
                 xamlType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  Microsoft.UI.Xaml.Media.Brush
-                xamlType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 7:   //  FontAwesome6.EFontAwesomeIcon
+            case 9:   //  FontAwesome6.EFontAwesomeIcon
                 userType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::FontAwesome6.EFontAwesomeIcon.None);
                 userType.AddEnumValue("Solid_TurnUp", global::FontAwesome6.EFontAwesomeIcon.Solid_TurnUp);
@@ -2371,21 +2389,25 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 8:   //  System.Enum
+            case 10:   //  System.Enum
                 userType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
-            case 9:   //  System.ValueType
+            case 11:   //  System.ValueType
                 userType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 10:   //  Double
+            case 12:   //  Microsoft.UI.Xaml.Media.Brush
                 xamlType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  FontAwesome6.EFlipOrientation
+            case 13:   //  Double
+                xamlType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 14:   //  FontAwesome6.EFlipOrientation
                 userType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Normal", global::FontAwesome6.EFlipOrientation.Normal);
                 userType.AddEnumValue("Horizontal", global::FontAwesome6.EFlipOrientation.Horizontal);
@@ -2393,14 +2415,14 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 12:   //  To_do_list_WinUI3.MainWindow
+            case 15:   //  To_do_list_WinUI3.MainWindow
                 userType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_12_MainWindow;
+                userType.Activator = Activate_15_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  Microsoft.UI.Xaml.Window
+            case 16:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -2472,25 +2494,25 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.XamlControlsResources)instance;
             that.UseCompactResources = (global::System.Boolean)Value;
         }
-        private object get_1_SvgAwesome_PrimaryColor(object instance)
-        {
-            var that = (global::FontAwesome6.Svg.SvgAwesome)instance;
-            return that.PrimaryColor;
-        }
-        private void set_1_SvgAwesome_PrimaryColor(object instance, object Value)
-        {
-            var that = (global::FontAwesome6.Svg.SvgAwesome)instance;
-            that.PrimaryColor = (global::Microsoft.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_2_SvgAwesome_Icon(object instance)
+        private object get_1_SvgAwesome_Icon(object instance)
         {
             var that = (global::FontAwesome6.Svg.SvgAwesome)instance;
             return that.Icon;
         }
-        private void set_2_SvgAwesome_Icon(object instance, object Value)
+        private void set_1_SvgAwesome_Icon(object instance, object Value)
         {
             var that = (global::FontAwesome6.Svg.SvgAwesome)instance;
             that.Icon = (global::FontAwesome6.EFontAwesomeIcon)Value;
+        }
+        private object get_2_SvgAwesome_PrimaryColor(object instance)
+        {
+            var that = (global::FontAwesome6.Svg.SvgAwesome)instance;
+            return that.PrimaryColor;
+        }
+        private void set_2_SvgAwesome_PrimaryColor(object instance, object Value)
+        {
+            var that = (global::FontAwesome6.Svg.SvgAwesome)instance;
+            that.PrimaryColor = (global::Microsoft.UI.Xaml.Media.Brush)Value;
         }
         private object get_3_SvgAwesome_Spin(object instance)
         {
@@ -2607,19 +2629,19 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
                 xamlMember.Getter = get_0_XamlControlsResources_UseCompactResources;
                 xamlMember.Setter = set_0_XamlControlsResources_UseCompactResources;
                 break;
-            case "FontAwesome6.Svg.SvgAwesome.PrimaryColor":
-                userType = (global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType)GetXamlTypeByName("FontAwesome6.Svg.SvgAwesome");
-                xamlMember = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlMember(this, "PrimaryColor", "Microsoft.UI.Xaml.Media.Brush");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_1_SvgAwesome_PrimaryColor;
-                xamlMember.Setter = set_1_SvgAwesome_PrimaryColor;
-                break;
             case "FontAwesome6.Svg.SvgAwesome.Icon":
                 userType = (global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType)GetXamlTypeByName("FontAwesome6.Svg.SvgAwesome");
                 xamlMember = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlMember(this, "Icon", "FontAwesome6.EFontAwesomeIcon");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_SvgAwesome_Icon;
-                xamlMember.Setter = set_2_SvgAwesome_Icon;
+                xamlMember.Getter = get_1_SvgAwesome_Icon;
+                xamlMember.Setter = set_1_SvgAwesome_Icon;
+                break;
+            case "FontAwesome6.Svg.SvgAwesome.PrimaryColor":
+                userType = (global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType)GetXamlTypeByName("FontAwesome6.Svg.SvgAwesome");
+                xamlMember = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlMember(this, "PrimaryColor", "Microsoft.UI.Xaml.Media.Brush");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_2_SvgAwesome_PrimaryColor;
+                xamlMember.Setter = set_2_SvgAwesome_PrimaryColor;
                 break;
             case "FontAwesome6.Svg.SvgAwesome.Spin":
                 userType = (global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType)GetXamlTypeByName("FontAwesome6.Svg.SvgAwesome");
