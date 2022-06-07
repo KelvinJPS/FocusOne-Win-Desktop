@@ -45,14 +45,19 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 
             <Button 
+             Name="Add_app_button"    
             Content="Add" Background="Green" 
             Grid.Column="0" Grid.Row="1"
-            Width="100">
+            Width="100"
+            Click="Add_app_button_Click">
 
             </Button>
 
-            <Button Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" Background="Red" Content="Delete" 
-                Width="100"></Button>
+            <Button 
+                Name="Delete_apps_button"
+                Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" Background="Red" Content="Delete" 
+                Width="100"
+                Click="Delete_apps_button_Click"></Button>
             </StackPanel>
             
         </StackPanel>
@@ -66,7 +71,7 @@
             
              <TextBlock Text="Set Timer for  "  ></TextBlock>
 
-                <ComboBox Text="00" IsEditable="True" >
+                <ComboBox Name="Hours_Combobox" Text="00" IsEditable="True" >
 
                     <ComboBoxItem Content="1"></ComboBoxItem>
                     <ComboBoxItem Content="2"></ComboBoxItem>
@@ -75,9 +80,9 @@
 
                 </ComboBox>
 
-                <TextBlock Text=" Hours " ></TextBlock>
+                <TextBlock  Text=" Hours " ></TextBlock>
 
-                <ComboBox IsEditable="True" Text="00"  >
+                <ComboBox Name="Minutes_combobox"  IsEditable="True" Text="00"  >
                 <ComboBoxItem Content="5"></ComboBoxItem>
                 <ComboBoxItem Content="15"></ComboBoxItem>
                 <ComboBoxItem Content="30"></ComboBoxItem>
@@ -93,8 +98,11 @@
            
         </StackPanel>
 
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
-                 Content="Start" Width="200" Background="Green" Height="50" ></Button>
+        <Button 
+                Name="Start_button"
+                Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+                Content="Start" Width="200" Background="Green" Height="50"
+                Click="Start_Click"></Button>
 
     </Grid>
 </Page>

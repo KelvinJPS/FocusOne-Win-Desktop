@@ -29,7 +29,7 @@
         <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" 
                    Text="Select the apps that helps you to finish the task" FontSize="15 "></TextBlock>
 
-            <ListBox x:ConnectionId='2' Name="ListBox_Apps"    Width="700" Height="150"   BorderThickness="1" >
+            <ListBox x:ConnectionId='5' Name="ListBox_Apps"    Width="700" Height="150"   BorderThickness="1" >
                 <ListBox.ItemTemplate>
 
                     <DataTemplate>
@@ -44,15 +44,20 @@
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 
-            <Button 
+            <Button x:ConnectionId='6' 
+             Name="Add_app_button"    
             Content="Add" Background="Green" 
             Grid.Column="0" Grid.Row="1"
-            Width="100">
+            Width="100"
+                                        >
 
             </Button>
 
-            <Button Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" Background="Red" Content="Delete" 
-                Width="100"></Button>
+            <Button x:ConnectionId='7' 
+                Name="Delete_apps_button"
+                Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" Background="Red" Content="Delete" 
+                Width="100"
+                                                ></Button>
             </StackPanel>
             
         </StackPanel>
@@ -66,7 +71,7 @@
             
              <TextBlock Text="Set Timer for  "  ></TextBlock>
 
-                <ComboBox Text="00" IsEditable="True" >
+                <ComboBox x:ConnectionId='3' Name="Hours_Combobox" Text="00" IsEditable="True" >
 
                     <ComboBoxItem Content="1"></ComboBoxItem>
                     <ComboBoxItem Content="2"></ComboBoxItem>
@@ -75,9 +80,9 @@
 
                 </ComboBox>
 
-                <TextBlock Text=" Hours " ></TextBlock>
+                <TextBlock  Text=" Hours " ></TextBlock>
 
-                <ComboBox IsEditable="True" Text="00"  >
+                <ComboBox x:ConnectionId='4' Name="Minutes_combobox"  IsEditable="True" Text="00"  >
                 <ComboBoxItem Content="5"></ComboBoxItem>
                 <ComboBoxItem Content="15"></ComboBoxItem>
                 <ComboBoxItem Content="30"></ComboBoxItem>
@@ -93,8 +98,11 @@
            
         </StackPanel>
 
-        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
-                 Content="Start" Width="200" Background="Green" Height="50" ></Button>
+        <Button x:ConnectionId='2' 
+                Name="Start_button"
+                Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+                Content="Start" Width="200" Background="Green" Height="50"
+                                   ></Button>
 
     </Grid>
 </Page>
