@@ -16,11 +16,29 @@ namespace To_do_list_WinUI3.Views
     /// </summary>
     public sealed partial class Focus_Task : Page
     {
+     
         public Focus_Task()
         {
             this.InitializeComponent();
+            ListBox_Apps.ItemsSource = GetProcessesWithWindow();
         }
 
+        private List<Process> GetProcessesWithWindow()
+        {
+            List<Process> processwithwindow = new List<Process>();
 
+            Process[] processes = Process.GetProcesses();
+
+            foreach (Process p in processes)
+            {
+                if (!String.IsNullOrEmpty(p.MainWindowTitle))
+                {
+                    processwithwindow.Add(p);
+                    Debug.WriteLine(p.ProcessName);
+                }
+            }
+            return processwithwindow;
+
+        }
     }
 }

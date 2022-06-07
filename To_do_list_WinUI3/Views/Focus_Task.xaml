@@ -29,7 +29,18 @@
         <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" 
                    Text="Select the apps that helps you to finish the task" FontSize="15 "></TextBlock>
 
-            <ListBox Name="ListBox_Apps"   Width="700" Height="150"   BorderThickness="1" ></ListBox>
+            <ListBox Name="ListBox_Apps"    Width="700" Height="150"   BorderThickness="1" >
+                <ListBox.ItemTemplate>
+
+                    <DataTemplate>
+                        <TextBlock>
+                            <Run Text="{Binding MainWindowTitle}"></Run>
+                            <Run Text="{Binding ProcessName}"></Run>
+                        </TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListBox>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 
