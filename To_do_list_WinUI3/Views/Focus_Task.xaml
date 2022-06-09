@@ -1,13 +1,13 @@
-﻿<Page
+﻿<Window
     x:Class="To_do_list_WinUI3.Views.Focus_Task"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:To_do_list_WinUI3.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:fa="using:FontAwesome6.Svg"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    >
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -18,50 +18,43 @@
             <RowDefinition Height="auto "></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
              
         </Grid.RowDefinitions>
 
         <TextBlock  Text="NameTask" FontSize="20"
                     HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="0,50,0,50" ></TextBlock>
-
+        
+        <Button  Name="return_button" Click="return_button_Click"
+                 BorderThickness="0" Width="40" Height="40" Margin="40,0,0,0">
+        
+            <fa:SvgAwesome Icon="Solid_ArrowLeft" ></fa:SvgAwesome>
+        </Button>
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" >
             
         <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Grid.ColumnSpan="2" 
                    Text="Select the apps that helps you to finish the task" FontSize="15 "></TextBlock>
 
-            <ListBox Name="ListBox_Apps"    Width="700" Height="150"   BorderThickness="1" >
-                <ListBox.ItemTemplate>
+            
+            <ListView Name="ListView_Apps" IsItemClickEnabled="True" SelectionChanged="ListView_Apps_SelectionChanged" BorderThickness="1" SelectionMode="Multiple"
+                       >
+                <ListView.ItemTemplate>
 
                     <DataTemplate>
                         <TextBlock>
                             <Run Text="{Binding MainWindowTitle}"></Run>
                             <Run Text="{Binding ProcessName}"></Run>
-                        </TextBlock>
+                            </TextBlock>
+             
                     </DataTemplate>
-                </ListBox.ItemTemplate>
+                </ListView.ItemTemplate>
 
-            </ListBox>
+            </ListView>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                
-            <Button 
-             Name="Add_app_button"    
-            Content="Add" Background="Green" 
-            Grid.Column="0" Grid.Row="1"
-            Width="100"
-            Click="Add_app_button_Click">
-
-            </Button>
-
-            <Button 
-                Name="Delete_apps_button"
-                Grid.Column="1" Grid.Row="1"  HorizontalAlignment="Center" Background="Red" Content="Delete" 
-                Width="100"
-                Click="Delete_apps_button_Click"></Button>
-            </StackPanel>
+            <Button Content="Refresh" Click="Refresh_Click"  HorizontalAlignment="Center"  ></Button>
             
         </StackPanel>
-
+      
 
         <StackPanel Grid.Column="0" Grid.Row="2" Margin="0,60,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Center">
             <TextBlock Text="Set timer"  FontSize="20" HorizontalAlignment="Center" Margin="0,0,0,10">
@@ -100,9 +93,11 @@
 
         <Button 
                 Name="Start_button"
-                Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" 
+                Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"    HorizontalAlignment="Center" 
                 Content="Start" Width="200" Background="Green" Height="50"
                 Click="Start_Click"></Button>
 
     </Grid>
-</Page>
+        
+
+</Window>

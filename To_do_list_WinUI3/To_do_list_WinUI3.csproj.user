@@ -7,7 +7,7 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
-    <None Update="Views\mainpage.xaml">
+    <None Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </None>
     <None Update="Package.appxmanifest">

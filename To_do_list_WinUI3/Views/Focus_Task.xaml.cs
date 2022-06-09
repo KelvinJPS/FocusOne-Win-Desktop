@@ -1,5 +1,6 @@
 ﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,6 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Windows.System;
 using Windows.System.Diagnostics;
+using To_do_list_WinUI3.Views;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -16,13 +18,13 @@ namespace To_do_list_WinUI3.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Focus_Task : Page
+    public sealed partial class Focus_Task : Window
     {
         List<Process> UsefulApps = new List<Process>();
         public Focus_Task()
         {
             this.InitializeComponent();
-            ListBox_Apps.ItemsSource = GetProcessesWithWindow();
+            ListView_Apps.ItemsSource = GetProcessesWithWindow();
         }
 
         private List<Process> GetProcessesWithWindow()
@@ -36,20 +38,11 @@ namespace To_do_list_WinUI3.Views
                 if (!String.IsNullOrEmpty(p.MainWindowTitle))
                 {
                     processwithwindow.Add(p);
-                    
+
                 }
             }
             return processwithwindow;
 
-        }
-
-        private void Add_app_button_Click(object sender, RoutedEventArgs e)
-        {
-            if (ListBox_Apps.SelectedItem != null)
-            {
-                UsefulApps.Add((ListBox_Apps.SelectedItem as Process));
-            }
-            
         }
 
         private async void Start_Click(object sender, RoutedEventArgs e)
@@ -66,7 +59,7 @@ namespace To_do_list_WinUI3.Views
             Task timer = new Task(() =>
             {
                 for (M = 0; M <= minutes; M++)
-                {                 
+                {
                     Thread.Sleep(minutes * 10000);
 
                 }
@@ -98,12 +91,26 @@ namespace To_do_list_WinUI3.Views
 
         }
 
-        private void Delete_apps_button_Click(object sender, RoutedEventArgs e)
+
+        private void ListView_Apps_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (ListBox_Apps.SelectedItem != null)
+            UsefulApps.Clear();
+            foreach (Process p in ListView_Apps.SelectedItems)
             {
-                UsefulApps.Remove((ListBox_Apps.SelectedItem as Process));
+                UsefulApps.Add(p);
             }
         }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+            => ListView_Apps.ItemsSource = GetProcessesWithWindow();
+
+        private void return_button_Click(object sender, RoutedEventArgs e)
+        {
+            var m_window = new MainWindow();
+            m_window.Activate();
+            this.Close();
+        }
+
+
     }
 }

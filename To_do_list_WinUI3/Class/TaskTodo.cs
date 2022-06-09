@@ -13,7 +13,7 @@ namespace to_do_list_WinUI3
 {
     public class TaskTodo : INotifyPropertyChanged
     {
-        private string _NameTask, _Priority, _NameList, _Description, _Done, _Icon;
+        private string _NameTask, _Priority, _NameList, _Description, _Done;
         private int _Id, _ParentTask;
 
         private DateTimeOffset _NextRep, _Date, _Reminder;

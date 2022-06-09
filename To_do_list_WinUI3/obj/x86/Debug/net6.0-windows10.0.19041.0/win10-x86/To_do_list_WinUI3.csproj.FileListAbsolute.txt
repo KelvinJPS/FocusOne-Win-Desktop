@@ -287,8 +287,8 @@ C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\n
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Focus_Task.xaml
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Focus_Task.xbf
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Focus_Task.xbf
-C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\mainpage.g.i.cs
-C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\mainpage.g.cs
-C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\mainpage.xaml
-C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\mainpage.xbf
-C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\mainpage.xbf
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\MainWindow.xbf
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\MainWindow.g.i.cs
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\MainWindow.g.cs
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\MainWindow.xaml
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\MainWindow.xbf

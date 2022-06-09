@@ -38,6 +38,7 @@ namespace To_do_list_WinUI3
         TaskList Tasklist = new TaskList();
         TaskTodo task = new TaskTodo();
         Func<DateTimeOffset, string> SetDate = (date) => string.Format("{0}-{1}-{2}", date.Month, date.Day, date.Year);
+        
         public MainWindow()
         {
             this.InitializeComponent();
@@ -502,11 +503,9 @@ namespace To_do_list_WinUI3
 
         private void Play_task_Click(object sender, RoutedEventArgs e)
         {
-            (this as Window).Content = new Focus_Task();
-            (this as Window).Activate();
-
-
-
+            var f_window = new Focus_Task();
+            f_window.Activate();
+            this.Close();
         }
         private void Circle_Checked(object sender, RoutedEventArgs e)
         {
@@ -602,8 +601,6 @@ namespace To_do_list_WinUI3
             item.UpdateTask();
             SubTasks.Remove(item);
         }
-
-
 
     }
 }
