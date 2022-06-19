@@ -135,7 +135,7 @@ namespace to_do_list_WinUI3
 
         public void UpdateTask() => TaskSqlite.UpdateData(TaskId, NameTask, Date, Reminder, Priority, ListName, Description, NextRep, Done);
 
-        public ObservableCollection<TaskTodo> GetSubtasks(int Id) => TaskSqlite.GetSubtasks(Id);
+        public ObservableCollection<TaskTodo> GetSubtasks() => TaskSqlite.GetSubtasks(TaskId);
 
         public ObservableCollection<TaskTodo> GetTodayTasks()
         {

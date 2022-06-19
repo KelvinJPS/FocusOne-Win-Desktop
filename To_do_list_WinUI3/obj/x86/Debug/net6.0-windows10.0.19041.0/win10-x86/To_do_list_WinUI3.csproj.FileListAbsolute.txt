@@ -243,7 +243,6 @@ C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\n
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\hostfxr.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\hostpolicy.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\mscordaccore.dll
-C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\mscordaccore_x86_x86_6.0.522.21309.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\mscordbi.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\mscorrc.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\msquic.dll
@@ -292,3 +291,9 @@ C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\n
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\MainWindow.g.cs
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\MainWindow.xaml
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\MainWindow.xbf
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Task_screen.xbf
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Task_screen.g.i.cs
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Task_screen.g.cs
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Task_screen.xaml
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Task_screen.xbf
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\mscordaccore_x86_x86_6.0.622.26707.dll

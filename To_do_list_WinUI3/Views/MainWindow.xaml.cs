@@ -21,6 +21,8 @@ using To_do_list_WinUI3.Views;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Microsoft.UI.Xaml.Hosting;
+using To_do_list_WinUI3.Class;
+
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -38,10 +40,11 @@ namespace To_do_list_WinUI3
         TaskList Tasklist = new TaskList();
         TaskTodo task = new TaskTodo();
         Func<DateTimeOffset, string> SetDate = (date) => string.Format("{0}-{1}-{2}", date.Month, date.Day, date.Year);
-        
+
         public MainWindow()
         {
             this.InitializeComponent();
+
             //Select the list by default
             ListView_defaultlists.SelectedItem = Today;
             //Get the list
@@ -58,9 +61,9 @@ namespace To_do_list_WinUI3
             subtask_list.ItemsSource = SubTasks;
             number_repeat.MaxLength = 3;
 
-           
+
         }
-       
+
         private List<Process> GetProcessesWithWindow()
         {
             List<Process> processwithwindow = new List<Process>();
@@ -208,10 +211,10 @@ namespace To_do_list_WinUI3
             // sheduled notification 
             try
             {
-               //// ToastContentBuilder N = new ToastContentBuilder();
-               // N.AddText(String.Format("you have to do {0}", task.NameTask));
-               // N.AddText(String.Format("{0}", task.NameTask));
-               // N.Schedule(Date.DateTime.AddSeconds(10));
+                //// ToastContentBuilder N = new ToastContentBuilder();
+                // N.AddText(String.Format("you have to do {0}", task.NameTask));
+                // N.AddText(String.Format("{0}", task.NameTask));
+                // N.Schedule(Date.DateTime.AddSeconds(10));
             }
             catch (Exception ex) { ex.Message.ToString(); }
 
@@ -503,8 +506,20 @@ namespace To_do_list_WinUI3
 
         private void Play_task_Click(object sender, RoutedEventArgs e)
         {
+        //    //S
+        //    var button = sender as Button;
+        //    var item = (TaskTodo)button.DataContext;
+
+          //  task_list.SelectedItem = item;
+
+            //Set the task selected to the selected in task list listview
+            (App.Current as App).TaskSelected = task_list.SelectedItem as TaskTodo;
+
+            //Open the new window
             var f_window = new Focus_Task();
             f_window.Activate();
+
+            //Close the window
             this.Close();
         }
         private void Circle_Checked(object sender, RoutedEventArgs e)
@@ -588,7 +603,7 @@ namespace To_do_list_WinUI3
                 Id = (task_list.SelectedItem as TaskTodo).TaskId;
             }
 
-            SubTasks = task.GetSubtasks(Id);
+            SubTasks = task.GetSubtasks();
             subtask_list.ItemsSource = SubTasks;
 
         }
@@ -603,4 +618,7 @@ namespace To_do_list_WinUI3
         }
 
     }
+
+
+    
 }

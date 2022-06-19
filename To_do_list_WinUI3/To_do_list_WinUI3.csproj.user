@@ -7,6 +7,9 @@
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Views\Task_screen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <None Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </None>

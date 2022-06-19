@@ -22,7 +22,7 @@
              
         </Grid.RowDefinitions>
 
-        <TextBlock  Text="NameTask" FontSize="20"
+        <TextBlock  Text="{x:Bind TaskSelected.NameTask}" FontSize="20"
                     HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="0,50,0,50" ></TextBlock>
         
         <Button  Name="return_button" Click="return_button_Click"

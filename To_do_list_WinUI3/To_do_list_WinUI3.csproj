@@ -14,6 +14,9 @@
   <ItemGroup>
     <EmbeddedResource Remove="Strings\en-US\Resources.resx" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Task_screen.xaml" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -52,5 +55,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Task_screen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

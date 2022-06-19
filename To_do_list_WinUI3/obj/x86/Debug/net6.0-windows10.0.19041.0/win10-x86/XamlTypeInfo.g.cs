@@ -224,7 +224,7 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[15];
+            _typeNameTable = new string[16];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
@@ -240,8 +240,9 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
             _typeNameTable[12] = "To_do_list_WinUI3.Views.Focus_Task";
             _typeNameTable[13] = "Microsoft.UI.Xaml.Window";
             _typeNameTable[14] = "To_do_list_WinUI3.MainWindow";
+            _typeNameTable[15] = "To_do_list_WinUI3.Views.Task_screen";
 
-            _typeTable = new global::System.Type[15];
+            _typeTable = new global::System.Type[16];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
@@ -257,6 +258,7 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
             _typeTable[12] = typeof(global::To_do_list_WinUI3.Views.Focus_Task);
             _typeTable[13] = typeof(global::Microsoft.UI.Xaml.Window);
             _typeTable[14] = typeof(global::To_do_list_WinUI3.MainWindow);
+            _typeTable[15] = typeof(global::To_do_list_WinUI3.Views.Task_screen);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -295,6 +297,7 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
         private object Activate_4_SvgAwesome() { return new global::FontAwesome6.Svg.SvgAwesome(); }
         private object Activate_12_Focus_Task() { return new global::To_do_list_WinUI3.Views.Focus_Task(); }
         private object Activate_14_MainWindow() { return new global::To_do_list_WinUI3.MainWindow(); }
+        private object Activate_15_Task_screen() { return new global::To_do_list_WinUI3.Views.Task_screen(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -2410,6 +2413,13 @@ namespace To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo
             case 14:   //  To_do_list_WinUI3.MainWindow
                 userType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
                 userType.Activator = Activate_14_MainWindow;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 15:   //  To_do_list_WinUI3.Views.Task_screen
+                userType = new global::To_do_list_WinUI3.To_do_list_WinUI3_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
+                userType.Activator = Activate_15_Task_screen;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

@@ -2,14 +2,17 @@
     x:Class="To_do_list_WinUI3.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:To_do_list_WinUI3"
+    xmlns:local="using:to_do_list_WinUI3"
+    xmlns:TaskSelected="using:To_do_list_WinUI3.Class"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local1="using:to_do_list_WinUI3"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:fa="using:FontAwesome6.Svg"
-    mc:Ignorable="d">
-
+    mc:Ignorable="d"
+    >
+    
 
     <Grid >
+        
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -95,9 +98,10 @@
                  Background="#04000E" Foreground="White" Height="40" Width="1000" Style="{StaticResource TextBoxStyle1}" />
 
 
-        <ListView x:Name="task_list" ItemClick="task_list_ItemClick" IsItemClickEnabled="True" Grid.Row="0" Grid.Column="1"  Background="Transparent"
-                  Padding="15" Margin="25,0,0,0" SelectionChanged="task_list_SelectionChanged"  >
-
+        <ListView Name="task_list" ItemClick="task_list_ItemClick" IsItemClickEnabled="True" Grid.Row="0" Grid.Column="1"  Background="Transparent"
+                  Padding="15" Margin="25,0,0,0"  SelectionChanged="task_list_SelectionChanged"    >
+         
+            
             <ListView.HeaderTemplate>
                 <DataTemplate  x:DataType="x:String">
                     <TextBlock  FontSize="30" HorizontalAlignment="Center" Text="{x:Bind }"></TextBlock>
@@ -106,9 +110,10 @@
 
             <ListView.ItemTemplate>
 
-                <DataTemplate x:DataType="local1:TaskTodo">
-
-                    <RelativePanel >
+                <DataTemplate x:DataType="local:TaskTodo">
+                  
+                 
+                    <RelativePanel  >
                         <RadioButton  Name="Circle"  RelativePanel.AlignLeftWithPanel="True"
                                       Style="{StaticResource RadioButtonStyle1}"
                                       Checked="Circle_Checked">
@@ -126,7 +131,8 @@
 
                         </Button>
                     </RelativePanel>
-
+                  
+                 
                 </DataTemplate>
             </ListView.ItemTemplate>
 
@@ -436,7 +442,7 @@
             <ListView  Name="subtask_list">
 
                 <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="local1:TaskTodo">
+                    <DataTemplate x:DataType="local:TaskTodo">
                         <StackPanel Orientation="Horizontal">
                             <RadioButton Name="subtaskdone_radiobutton" 
                                          Style="{StaticResource RadioButtonStyle1}" 

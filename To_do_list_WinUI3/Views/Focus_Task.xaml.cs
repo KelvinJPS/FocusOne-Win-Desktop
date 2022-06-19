@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Windows.System;
 using Windows.System.Diagnostics;
 using To_do_list_WinUI3.Views;
+using to_do_list_WinUI3;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -21,6 +22,7 @@ namespace To_do_list_WinUI3.Views
     public sealed partial class Focus_Task : Window
     {
         List<Process> UsefulApps = new List<Process>();
+        TaskTodo TaskSelected = (App.Current as App).TaskSelected;
         public Focus_Task()
         {
             this.InitializeComponent();
@@ -47,13 +49,21 @@ namespace To_do_list_WinUI3.Views
 
         private async void Start_Click(object sender, RoutedEventArgs e)
         {
+           await BlockApps();
+           var f_window = new Task_screen();
+           f_window.Activate();
+          
+           this.Close(); ;
+        }
+
+        private async Task  BlockApps()
+        {
             int hours;
             int minutes;
             int M = 0;
 
             int.TryParse(Hours_Combobox.Text, out hours);
             int.TryParse(Minutes_combobox.Text, out minutes);
-
             List<Process> processwithwindow = new List<Process>();
 
             Task timer = new Task(() =>
@@ -87,11 +97,7 @@ namespace To_do_list_WinUI3.Views
 
             timer.Start();
             Blocker.Start();
-
-
         }
-
-
         private void ListView_Apps_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UsefulApps.Clear();
