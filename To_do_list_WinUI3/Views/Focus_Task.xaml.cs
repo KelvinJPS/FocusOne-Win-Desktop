@@ -11,6 +11,8 @@ using Windows.System;
 using Windows.System.Diagnostics;
 using To_do_list_WinUI3.Views;
 using to_do_list_WinUI3;
+using To_do_list_WinUI3.Class;
+using Windows.UI.Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -47,57 +49,27 @@ namespace To_do_list_WinUI3.Views
 
         }
 
-        private async void Start_Click(object sender, RoutedEventArgs e)
+        private void Start_Click(object sender, RoutedEventArgs e)
         {
-           await BlockApps();
-           var f_window = new Task_screen();
-           f_window.Activate();
-          
-           this.Close(); ;
-        }
+            BlockTime time = new BlockTime();
 
-        private async Task  BlockApps()
-        {
-            int hours;
-            int minutes;
-            int M = 0;
+            // Get the minutes and hours 
+            time.Hours = int.Parse(Hours_Combobox.Text);
+            time.Minutes = int.Parse(Minutes_combobox.Text);
 
-            int.TryParse(Hours_Combobox.Text, out hours);
-            int.TryParse(Minutes_combobox.Text, out minutes);
-            List<Process> processwithwindow = new List<Process>();
+            //Update the variable in app.cs BlockTime to be able to share data between pages 
+            (App.Current as App).blockTime = time;
 
-            Task timer = new Task(() =>
-            {
-                for (M = 0; M <= minutes; M++)
-                {
-                    Thread.Sleep(minutes * 10000);
+            //Update the variable in app.cs Useful apps to be able to share data between pages 
+            (App.Current as App).UsefulApps = UsefulApps;
 
-                }
+            //Activate the new window  task screen 
+            var f_window = new Task_screen();
+            f_window.Activate();
+            this.Close(); ; //close the window 
 
-            });
+         }
 
-            Task Blocker = new Task(() =>
-            {
-                while (M != minutes)
-                {
-                    processwithwindow = GetProcessesWithWindow();
-
-                    foreach (Process p in processwithwindow)
-                    {
-
-                        if (UsefulApps.Any(program => program.Id == p.Id) == false)
-                        {
-                            p.Kill();
-                        }
-
-                    }
-                };
-            }
-                );
-
-            timer.Start();
-            Blocker.Start();
-        }
         private void ListView_Apps_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UsefulApps.Clear();

@@ -506,11 +506,11 @@ namespace To_do_list_WinUI3
 
         private void Play_task_Click(object sender, RoutedEventArgs e)
         {
-        //    //S
-        //    var button = sender as Button;
-        //    var item = (TaskTodo)button.DataContext;
+            //Select the task from the button data context
+            var button = sender as Button;
+            var item = (TaskTodo)button.DataContext;
 
-          //  task_list.SelectedItem = item;
+           task_list.SelectedItem = item;
 
             //Set the task selected to the selected in task list listview
             (App.Current as App).TaskSelected = task_list.SelectedItem as TaskTodo;

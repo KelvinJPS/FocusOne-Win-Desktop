@@ -8,6 +8,7 @@ using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Shapes;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -60,5 +61,8 @@ namespace To_do_list_WinUI3
 
         private Window m_window;
         public TaskTodo TaskSelected = new TaskTodo();
+        public BlockTime   blockTime = new BlockTime();
+        public List<Process> UsefulApps = new List<Process>();
+
     }
 }
