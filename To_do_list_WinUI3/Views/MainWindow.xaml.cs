@@ -22,6 +22,8 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Microsoft.UI.Xaml.Hosting;
 using To_do_list_WinUI3.Class;
+using Microsoft.UI.Windowing;
+using AppWindow = Microsoft.UI.Windowing.AppWindow;
 
 
 // To learn more about WinUI, the WinUI project structure,
@@ -61,6 +63,22 @@ namespace To_do_list_WinUI3
             subtask_list.ItemsSource = SubTasks;
             number_repeat.MaxLength = 3;
 
+            // Retrieve the window handle (HWND) of the current (XAML) WinUI 3 window.
+            var hWnd =
+                WinRT.Interop.WindowNative.GetWindowHandle(this);
+
+            // Retrieve the WindowId that corresponds to hWnd.
+            Microsoft.UI.WindowId windowId =
+                Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
+
+            // Lastly, retrieve the AppWindow for the current (XAML) WinUI 3 window.
+            Microsoft.UI.Windowing.AppWindow appWindow =
+                Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
+
+            //var size = new Windows.Graphics.SizeInt32();
+            //size.Width = 1500;
+            //size.Height = 1500;
+            //appWindow.SetPresenter(AppWindowPresenterKind.Default);
 
         }
 

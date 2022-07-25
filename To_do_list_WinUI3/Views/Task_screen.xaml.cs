@@ -19,6 +19,7 @@ using to_do_list_WinUI3;
 using To_do_list_WinUI3.Class;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Timer = System.Timers.Timer;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -31,15 +32,20 @@ namespace To_do_list_WinUI3.Views
     public sealed partial class Task_screen : Window
     {
         TaskTodo TaskSelected = (App.Current as App).TaskSelected;
-        BlockTime blockTime = (App.Current as App).blockTime;
+        TimeSpan blockTime = (App.Current as App).blockTime;
         ObservableCollection<TaskTodo> SubTasks = new ObservableCollection<TaskTodo>();
         List<Process> UsefulApps = (App.Current as App).UsefulApps;
+        DispatcherTimer dispatcherTimer;
+
+
 
         public Task_screen()
         {
             this.InitializeComponent();
             SubTasks = TaskSelected.GetSubtasks();
-           
+            SetDistapcherTimer();
+            
+
         }
         private List<Process> GetProcessesWithWindow()
         {
@@ -100,43 +106,6 @@ namespace To_do_list_WinUI3.Views
             }
         }
 
-        private async Task <BlockTime>  GetBlockTime() {
-
-            BlockTime time = (App.Current as App).blockTime;       
-            int M = 0;
-
-            Task Blocker = Task.Run(() =>
-            {
-
-                while (time.Minutes > 0 || time.Hours > 0)
-                {
-                    BlockApps();
-                }
-            });
-
-            for (time.Seconds = 0; time.Minutes > 0; time.Seconds++)
-                {
-                    await Task.Delay(1000); //wait a second 
-
-                    //Each 60 seconds passed time.minutes = -=1 
-                    //Each 60 minutes passed time.hours   = -=1
-
-                    if (time.Seconds == 60)
-                    {
-                        time.Minutes -= 1;
-                        time.Seconds = 0;
-                        M += 1;
-                    }
-                    if (M == 60)
-                    {
-                        time.Hours -= 1;
-                        M = 0;
-                    }
-
-                }
-                 
-            return time;
-        }
         private void BlockApps()
         {
             List<Process> processwithwindow = new List<Process>();                    
@@ -150,14 +119,51 @@ namespace To_do_list_WinUI3.Views
                 }           
         }
 
+        
+
+        private  void Window_Activated(object sender, WindowActivatedEventArgs args)
+        {         
+            startOrRestartDispatchTimer();
+           
+        }
+        private void SetDistapcherTimer()
+        {
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Interval = TimeSpan.FromSeconds(1);
+            dispatcherTimer.Start();
+        }
+        private void startOrRestartDispatchTimer()
+        {
+            dispatcherTimer.Stop(); // If already running  
+            Countdown_TexBlock.Text = blockTime.ToString();
+            dispatcherTimer.Start();
+        }
 
 
-        private async void Window_Activated(object sender, WindowActivatedEventArgs args)
+        private void dispatcherTimer_Tick(object sender, object e)
         {
 
-            blockTime = await GetBlockTime();
+            if (blockTime != TimeSpan.Zero)
+            {
+                blockTime = blockTime.Subtract(TimeSpan.FromSeconds(1));
+                Countdown_TexBlock.Text = blockTime.ToString();
+                BlockApps();
+           
+            }
+           
+            else
+            {
+                dispatcherTimer.Stop();
+
+            }
+
+          
+    
         }
+      
     }
+
 }
 
 

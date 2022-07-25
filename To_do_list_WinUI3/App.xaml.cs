@@ -1,4 +1,5 @@
-﻿using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Windowing;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -56,12 +57,11 @@ namespace To_do_list_WinUI3
         {
             m_window = new MainWindow();
             m_window.Activate();
-           
         }
 
         private Window m_window;
         public TaskTodo TaskSelected = new TaskTodo();
-        public BlockTime   blockTime = new BlockTime();
+        public TimeSpan   blockTime = new TimeSpan();
         public List<Process> UsefulApps = new List<Process>();
 
     }

@@ -51,13 +51,11 @@ namespace To_do_list_WinUI3.Views
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            BlockTime time = new BlockTime();
 
             // Get the minutes and hours 
-            time.Hours = int.Parse(Hours_Combobox.Text);
-            time.Minutes = int.Parse(Minutes_combobox.Text);
-
-            //Update the variable in app.cs BlockTime to be able to share data between pages 
+            TimeSpan time = new TimeSpan(int.Parse(Hours_Combobox.Text), int.Parse(Minutes_combobox.Text), 0);
+                  
+           //Update the variable in app.cs BlockTime to be able to share data between pages 
             (App.Current as App).blockTime = time;
 
             //Update the variable in app.cs Useful apps to be able to share data between pages 

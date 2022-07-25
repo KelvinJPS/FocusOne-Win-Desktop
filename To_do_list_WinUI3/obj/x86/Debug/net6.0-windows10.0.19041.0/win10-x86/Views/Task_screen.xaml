@@ -5,7 +5,7 @@
     xmlns:local="using:To_do_list_WinUI3.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:fa="using:FontAwesome6.Svg" xmlns:local1="using:to_do_list_WinUI3"
+    xmlns:fa="using:FontAwesome6.Svg" xmlns:local1="using:to_do_list_WinUI3" xmlns:sys="using:System"
     mc:Ignorable="d"
                                 
     
@@ -40,21 +40,18 @@
                                                                 ></TextBox>
 
         <Grid Grid.Row="1" HorizontalAlignment ="Center" Grid.ColumnSpan="2" Margin="0,0,0,0" Padding="0" >
-
-            <Ellipse Width="300" Height="300" 
+            <Ellipse Width="400" Height="400" 
                  Fill="Transparent" Stroke="White" HorizontalAlignment="Center"  VerticalAlignment="Center"  ></Ellipse>
 
-            <TextBlock x:ConnectionId='12' Name="Hours_TexBlock" Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Center"
+            <TextBlock x:ConnectionId='12' Name="Countdown_TexBlock" Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Center"
                         FontSize="80" Margin="60,0,0,0"
-                                                                    >
+                                                 >
+                        
+                      
 
             </TextBlock>
 
-            <TextBlock x:ConnectionId='13' Name="Minutes_TexBlock" Grid.Column="1" Grid.Row="0"  HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,70,0" 
-                       FontSize="80"
-                                                                     
-                       >
-            </TextBlock>
+          
         </Grid>
 
         <ListView x:ConnectionId='5'  Grid.Row="3" HorizontalAlignment="Center" Grid.ColumnSpan="2"
