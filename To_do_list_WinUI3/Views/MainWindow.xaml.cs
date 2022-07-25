@@ -185,7 +185,8 @@ namespace To_do_list_WinUI3
             if (reminder_time_picker.SelectedTime.HasValue == true)
             {
                 var Time = reminder_time_picker.SelectedTime;
-                Date = Date - ((TimeSpan)Time) + ((TimeSpan)Time);
+                Date = Date.Date.Add((TimeSpan)Time);     
+                
             }
 
             SheduleNotification(Date);
