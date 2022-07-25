@@ -110,6 +110,7 @@ namespace to_do_list_WinUI3.Data_access
             var Tasks = new ObservableCollection<TaskTodo>();
             //get data from sqlite3
             string dbpath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "TasksSqlite.db");
+            Debug.WriteLine(ApplicationData.Current.LocalFolder.Path);
             using (SqliteConnection db =
                new SqliteConnection($"Filename={dbpath}"))
             {

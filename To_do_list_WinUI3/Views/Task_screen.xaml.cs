@@ -16,7 +16,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using to_do_list_WinUI3;
-using To_do_list_WinUI3.Class;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Timer = System.Timers.Timer;

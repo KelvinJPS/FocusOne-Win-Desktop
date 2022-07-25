@@ -11,7 +11,6 @@ using Windows.System;
 using Windows.System.Diagnostics;
 using To_do_list_WinUI3.Views;
 using to_do_list_WinUI3;
-using To_do_list_WinUI3.Class;
 using Windows.UI.Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238

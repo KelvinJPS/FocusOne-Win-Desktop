@@ -15,7 +15,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using to_do_list_WinUI3;
 using to_do_list_WinUI3.Data_access;
-using To_do_list_WinUI3.Class;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;

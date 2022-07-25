@@ -21,9 +21,9 @@ using To_do_list_WinUI3.Views;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Microsoft.UI.Xaml.Hosting;
-using To_do_list_WinUI3.Class;
 using Microsoft.UI.Windowing;
 using AppWindow = Microsoft.UI.Windowing.AppWindow;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 
 // To learn more about WinUI, the WinUI project structure,
@@ -63,22 +63,7 @@ namespace To_do_list_WinUI3
             subtask_list.ItemsSource = SubTasks;
             number_repeat.MaxLength = 3;
 
-            // Retrieve the window handle (HWND) of the current (XAML) WinUI 3 window.
-            var hWnd =
-                WinRT.Interop.WindowNative.GetWindowHandle(this);
-
-            // Retrieve the WindowId that corresponds to hWnd.
-            Microsoft.UI.WindowId windowId =
-                Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hWnd);
-
-            // Lastly, retrieve the AppWindow for the current (XAML) WinUI 3 window.
-            Microsoft.UI.Windowing.AppWindow appWindow =
-                Microsoft.UI.Windowing.AppWindow.GetFromWindowId(windowId);
-
-            //var size = new Windows.Graphics.SizeInt32();
-            //size.Width = 1500;
-            //size.Height = 1500;
-            //appWindow.SetPresenter(AppWindowPresenterKind.Default);
+           
 
         }
 
@@ -229,10 +214,10 @@ namespace To_do_list_WinUI3
             // sheduled notification 
             try
             {
-                //// ToastContentBuilder N = new ToastContentBuilder();
-                // N.AddText(String.Format("you have to do {0}", task.NameTask));
-                // N.AddText(String.Format("{0}", task.NameTask));
-                // N.Schedule(Date.DateTime.AddSeconds(10));
+                  ToastContentBuilder N = new ToastContentBuilder();
+                  N.AddText(String.Format("you have to do {0}", task.NameTask));
+                  N.AddText(String.Format("{0}", task.NameTask));
+                  N.Schedule(Date.DateTime.AddSeconds(10));
             }
             catch (Exception ex) { ex.Message.ToString(); }
 
@@ -615,14 +600,14 @@ namespace To_do_list_WinUI3
         private void task_list_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             CheckPriority();
-            int Id = default;
+            
             if (task_list.SelectedItem != null)
             {
-                Id = (task_list.SelectedItem as TaskTodo).TaskId;
-            }
+                task = (task_list.SelectedItem as TaskTodo);
+                SubTasks = task.GetSubtasks();
+                subtask_list.ItemsSource = SubTasks;
 
-            SubTasks = task.GetSubtasks();
-            subtask_list.ItemsSource = SubTasks;
+            }
 
         }
 
