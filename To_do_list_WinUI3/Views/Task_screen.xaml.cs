@@ -79,6 +79,7 @@ namespace To_do_list_WinUI3.Views
             var item = (TaskTodo)button.DataContext;
             item.Done = "True";
             item.UpdateTask();
+            SubTasks.Remove(item);
 
         }
 

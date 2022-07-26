@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-07-25T16:56:26.789</Modified>
+      <Modified>2022-07-26T14:16:40.250</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.dll">
       <PackagePath>To_do_list_WinUI3.dll</PackagePath>
-      <Modified>2022-07-25T16:56:26.492</Modified>
+      <Modified>2022-07-26T14:16:40.027</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>To_do_list_WinUI3.exe</PackagePath>
-      <Modified>2022-07-25T16:56:26.500</Modified>
+      <Modified>2022-07-26T14:16:40.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.deps.json">
       <PackagePath>To_do_list_WinUI3.deps.json</PackagePath>

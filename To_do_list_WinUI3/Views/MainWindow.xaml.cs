@@ -181,11 +181,11 @@ namespace To_do_list_WinUI3
             reminder_popup.IsOpen = false;
             DateTimeOffset Date = reminder_calendar.SelectedDates[0];
 
-            //get the date and time from the control 
+            //get the Time selected 
             if (reminder_time_picker.SelectedTime.HasValue == true)
             {
                 var Time = reminder_time_picker.SelectedTime;
-                Date = Date.Date.Add((TimeSpan)Time);     
+                Date = Date.Date.Add((TimeSpan)Time);     //Date D/M/Y + timer selected 
                 
             }
 
