@@ -7,9 +7,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
+
 namespace To_do_list_WinUI3.Strings.en_US {
-    
+    using System;
     
     
     /// <summary>

@@ -1,0 +1,4 @@
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.pdb
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\e_sqlite3.dll
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.exe

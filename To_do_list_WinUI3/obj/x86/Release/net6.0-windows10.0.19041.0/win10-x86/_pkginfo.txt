@@ -1,0 +1,1 @@
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Release\net6.0-windows10.0.19041.0\win10-x86\AppPackages\To_do_list_WinUI3_1.0.0.0_x86_Test\To_do_list_WinUI3_1.0.0.0_x86.msix

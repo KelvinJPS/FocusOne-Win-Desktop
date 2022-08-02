@@ -8,12 +8,12 @@
 
   <Identity
     Name="f62045e1-523d-42ed-bbb6-7ec837d7f154"
-    Publisher="CN=Kelvin"
+    Publisher="CN=Kelvin_Piña_Sledzinski"
     Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>To_do_list_WinUI3</DisplayName>
-    <PublisherDisplayName>Kelvin</PublisherDisplayName>
+    <PublisherDisplayName>Kelvin Piña Sledzinski</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -38,6 +38,8 @@
         Square44x44Logo="Assets\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>

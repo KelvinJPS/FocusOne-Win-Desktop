@@ -1,7 +1,8 @@
 {
   "profiles": {
     "To_do_list_WinUI3 (Package)": {
-      "commandName": "MsixPackage"
+      "commandName": "MsixPackage",
+      "alwaysReinstallApp": false
     },
     "To_do_list_WinUI3 (Unpackaged)": {
       "commandName": "Project"

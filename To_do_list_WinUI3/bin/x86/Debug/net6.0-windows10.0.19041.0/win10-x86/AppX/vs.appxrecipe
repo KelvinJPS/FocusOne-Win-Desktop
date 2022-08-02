@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>f62045e1-523d-42ed-bbb6-7ec837d7f154</PackageIdentityName>
-    <PackageIdentityPublisher>CN=Kelvin</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=Kelvin Piña Sledzinski</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,40 +18,40 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppX</LayoutDir>
-    <RegisteredManifestChecksum>5FBEE98D549DE933FE622CC88DDF8E06F00DF60A61036776DEB0CB1D7C677665</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>f62045e1-523d-42ed-bbb6-7ec837d7f154_1.0.0.0_x86__x2gqvhaq52pwa</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>f62045e1-523d-42ed-bbb6-7ec837d7f154_x2gqvhaq52pwa!App</RegisteredUserModeAppID>
+    <RegisteredManifestChecksum>CCAF121E2760D1F82FFCF1F425E9190D3637FF353DD014D6EB5B6FB6FC6982FA</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>f62045e1-523d-42ed-bbb6-7ec837d7f154_1.0.0.0_x86__34h2edccstggy</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>f62045e1-523d-42ed-bbb6-7ec837d7f154_34h2edccstggy!App</RegisteredUserModeAppID>
     <RegisteredPackageID>f62045e1-523d-42ed-bbb6-7ec837d7f154</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Kelvin</RegisteredPackagePublisher>
+    <RegisteredPackagePublisher>CN=Kelvin Piña Sledzinski</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-07-26T14:16:40.250</Modified>
+      <Modified>2022-08-02T01:35:42.978</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-07-25T16:56:26.589</Modified>
+      <Modified>2022-08-02T01:20:44.365</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.runtimeconfig.json">
       <PackagePath>To_do_list_WinUI3.runtimeconfig.json</PackagePath>
-      <Modified>2022-07-25T16:29:00.541</Modified>
+      <Modified>2022-07-31T23:58:07.828</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.dll">
       <PackagePath>To_do_list_WinUI3.dll</PackagePath>
-      <Modified>2022-07-26T14:16:40.027</Modified>
+      <Modified>2022-08-02T01:21:26.989</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>To_do_list_WinUI3.exe</PackagePath>
-      <Modified>2022-07-26T14:16:40.035</Modified>
+      <Modified>2022-08-02T01:21:26.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.deps.json">
       <PackagePath>To_do_list_WinUI3.deps.json</PackagePath>
-      <Modified>2022-07-25T16:29:00.430</Modified>
+      <Modified>2022-08-01T21:43:55.773</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\.nuget\packages\microsoft.netcore.app.runtime.win-x86\6.0.7\runtimes\win-x86\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

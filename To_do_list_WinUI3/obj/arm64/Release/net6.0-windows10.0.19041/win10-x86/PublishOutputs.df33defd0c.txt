@@ -1,0 +1,5 @@
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\win10x86\To_do_list_WinUI3.pdb
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\win10x86\Microsoft.WindowsAppRuntime.Bootstrap.dll
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\win10x86\e_sqlite3.dll
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\win10x86\resources.pri
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\win10x86\To_do_list_WinUI3.exe

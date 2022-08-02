@@ -232,6 +232,8 @@ C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\FontAwesome6.Shared.WinUI.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\FontAwesome6.Svg.WinUI.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\Microsoft.Data.Sqlite.dll
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\Microsoft.Toolkit.Uwp.Notifications.dll
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\Microsoft.Win32.SystemEvents.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\Microsoft.InteractiveExperiences.Projection.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\Microsoft.WinUI.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\Microsoft.Windows.AppLifecycle.Projection.dll
@@ -244,6 +246,7 @@ C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\SQLitePCLRaw.batteries_v2.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\SQLitePCLRaw.core.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\System.Drawing.Common.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\Microsoft.WindowsAppRuntime.Bootstrap.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\e_sqlite3.dll
 C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\Debug\net6.0-windows10.0.19041.0\win10-x86\publish\resources.pri
