@@ -7,13 +7,14 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="f62045e1-523d-42ed-bbb6-7ec837d7f154"
-    Publisher="CN=Kelvin_Piña_Sledzinski"
+    Name="60542KelvinJoelPiaSledzin.FocusOne"
+
+    Publisher="CN=0FE2C455-46CA-41A5-88C8-A318C38F4D36"
     Version="1.0.0.0" />
 
   <Properties>
-    <DisplayName>To_do_list_WinUI3</DisplayName>
-    <PublisherDisplayName>Kelvin Piña Sledzinski</PublisherDisplayName>
+    <DisplayName>FocusOne</DisplayName>
+    <PublisherDisplayName>Kelvin Joel Piña Sledzinski</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -31,15 +32,20 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="To_do_list_WinUI3"
-        Description="To_do_list_WinUI3"
+        DisplayName="FocusOne"
+        Description="To do list app  Focus on one task and  block apps"
         BackgroundColor="transparent"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        Square150x150Logo="Assets\focus.png"  Square44x44Logo="Assets\ftarget.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"  Square310x310Logo="Assets\target (1).png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
+        <uap:LockScreen BadgeLogo="Assets\StoreLogo.png" Notification="badge"/>
       </uap:VisualElements>
     </Application>
   </Applications>

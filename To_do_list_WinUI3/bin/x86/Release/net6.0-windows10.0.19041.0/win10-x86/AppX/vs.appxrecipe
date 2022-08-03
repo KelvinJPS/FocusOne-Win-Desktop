@@ -8,8 +8,8 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Release|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>f62045e1-523d-42ed-bbb6-7ec837d7f154</PackageIdentityName>
-    <PackageIdentityPublisher>CN=Kelvin Piña Sledzinski</PackageIdentityPublisher>
+    <PackageIdentityName>60542KelvinJoelPiaSledzin.FocusOne</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Kelvin Joel Piña Sledzinski</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Release\net6.0-windows10.0.19041.0\win10-x86\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,36 +18,36 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Release\net6.0-windows10.0.19041.0\win10-x86\AppX</LayoutDir>
-    <RegisteredManifestChecksum>CCAF121E2760D1F82FFCF1F425E9190D3637FF353DD014D6EB5B6FB6FC6982FA</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>f62045e1-523d-42ed-bbb6-7ec837d7f154_1.0.0.0_x86__34h2edccstggy</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>f62045e1-523d-42ed-bbb6-7ec837d7f154_34h2edccstggy!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>f62045e1-523d-42ed-bbb6-7ec837d7f154</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Kelvin Piña Sledzinski</RegisteredPackagePublisher>
+    <RegisteredManifestChecksum>DF9359C0966471E1A4D5BB7889816C82DC84C3A5582B7FF61918C2F3A12813CE</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>60542KelvinJoelPiaSledzin.FocusOne_1.0.0.0_x86__ejrn0bfj4gk3g</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>60542KelvinJoelPiaSledzin.FocusOne_ejrn0bfj4gk3g!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>60542KelvinJoelPiaSledzin.FocusOne</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Kelvin Joel Piña Sledzinski</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Release\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-07-31T23:54:16.890</Modified>
+      <Modified>2022-08-03T15:24:14.552</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Release\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-07-31T23:54:15.816</Modified>
+      <Modified>2022-08-03T15:23:50.962</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Release\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.runtimeconfig.json">
       <PackagePath>To_do_list_WinUI3.runtimeconfig.json</PackagePath>
-      <Modified>2022-07-31T23:54:15.615</Modified>
+      <Modified>2022-08-03T15:23:50.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Release\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>To_do_list_WinUI3.exe</PackagePath>
-      <Modified>2022-07-31T23:54:14.942</Modified>
+      <Modified>2022-08-03T15:23:50.712</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Release\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.deps.json">
       <PackagePath>To_do_list_WinUI3.deps.json</PackagePath>
-      <Modified>2022-07-31T23:54:15.508</Modified>
+      <Modified>2022-08-03T15:23:50.899</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\.nuget\packages\microsoft.netcore.app.runtime.win-x86\6.0.7\runtimes\win-x86\native\API-MS-Win-core-xstate-l2-1-0.dll">
       <PackagePath>API-MS-Win-core-xstate-l2-1-0.dll</PackagePath>
@@ -1027,7 +1027,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Release\net6.0-windows10.0.19041.0\win10-x86\R2R\To_do_list_WinUI3.dll">
       <PackagePath>To_do_list_WinUI3.dll</PackagePath>
-      <Modified>2022-07-31T23:54:16.762</Modified>
+      <Modified>2022-08-03T15:23:51.732</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Release\net6.0-windows10.0.19041.0\win10-x86\R2R\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -1045,13 +1045,29 @@
       <PackagePath>FontAwesome6.Svg.WinUI.pri</PackagePath>
       <Modified>2022-05-29T18:20:58.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\bullseye-solid.svg">
+      <PackagePath>Assets\bullseye-solid.svg</PackagePath>
+      <Modified>2022-08-02T04:35:33.580</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\focus.png">
+      <PackagePath>Assets\focus.png</PackagePath>
+      <Modified>2022-08-02T00:18:25.928</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\ftarget.scale-400.png">
+      <PackagePath>Assets\ftarget.scale-400.png</PackagePath>
+      <Modified>2022-08-02T04:32:00.414</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2022-05-30T21:48:20.535</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <Modified>2022-05-30T21:48:20.537</Modified>
+      <Modified>2022-08-02T04:32:00.414</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <Modified>2022-08-02T04:32:00.414</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
@@ -1065,13 +1081,21 @@
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <Modified>2022-05-30T21:48:20.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <Modified>2022-05-30T21:48:20.541</Modified>
+    <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <Modified>2022-08-02T04:32:00.414</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\target %281%29.scale-400.png">
+      <PackagePath>Assets\target %281%29.scale-400.png</PackagePath>
+      <Modified>2022-08-02T04:32:00.414</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\target %282%29.png">
+      <PackagePath>Assets\target %282%29.png</PackagePath>
+      <Modified>2022-08-02T04:47:20.558</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <Modified>2022-05-30T21:48:20.541</Modified>
+      <Modified>2022-08-02T04:32:00.414</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -47,6 +47,8 @@ namespace To_do_list_WinUI3
         {
             this.InitializeComponent();
 
+            this.Title = "Focus One";
+
             //Select the list by default
             ListView_defaultlists.SelectedItem = Today;
             //Get the list

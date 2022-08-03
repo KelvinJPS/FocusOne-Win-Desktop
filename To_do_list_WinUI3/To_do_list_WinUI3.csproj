@@ -9,14 +9,38 @@
     <PublishProfile>win10-$(Platform).pubxml</PublishProfile>
     <UseWinUI>true</UseWinUI>
     <EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
-    <PackageCertificateThumbprint>57FECF6C9E4DCED62A198485713D9566398DD358</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>80B959656F714D829AFEA934E732D9079FDC117E</PackageCertificateThumbprint>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <TargetFramework>net6.0-windows10.0.19041.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="Assets\target.altform-lightunplated_targetsize-16.png" />
+    <Content Remove="Assets\target.altform-lightunplated_targetsize-24.png" />
+    <Content Remove="Assets\target.altform-lightunplated_targetsize-256.png" />
+    <Content Remove="Assets\target.altform-lightunplated_targetsize-32.png" />
+    <Content Remove="Assets\target.altform-lightunplated_targetsize-48.png" />
+    <Content Remove="Assets\target.altform-unplated_targetsize-16.png" />
+    <Content Remove="Assets\target.altform-unplated_targetsize-24.png" />
+    <Content Remove="Assets\target.altform-unplated_targetsize-256.png" />
+    <Content Remove="Assets\target.altform-unplated_targetsize-32.png" />
+    <Content Remove="Assets\target.altform-unplated_targetsize-48.png" />
+    <Content Remove="Assets\target.scale-125.png" />
+    <Content Remove="Assets\target.scale-150.png" />
+    <Content Remove="Assets\target.targetsize-16.png" />
+    <Content Remove="Assets\target.targetsize-24.png" />
+    <Content Remove="Assets\target.targetsize-256.png" />
+    <Content Remove="Assets\target.targetsize-32.png" />
+    <Content Remove="Assets\target.targetsize-48.png" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Remove="Strings\en-US\Resources.resx" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Assets\ftarget.scale-400.png" />
+    <None Remove="Assets\target %281%29.scale-400.png" />
+    <None Remove="Assets\target.scale-100.png" />
+    <None Remove="Assets\target.scale-200.png" />
+    <None Remove="Assets\target.scale-400.png" />
     <None Remove="Views\Task_screen.xaml" />
   </ItemGroup>
 
@@ -26,7 +50,6 @@
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
 
@@ -63,5 +86,11 @@
     <Page Update="Views\Task_screen.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <DesignData Remove="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
 </Project>

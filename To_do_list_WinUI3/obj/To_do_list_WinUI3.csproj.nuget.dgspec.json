@@ -30,7 +30,7 @@
         },
         "frameworks": {
           "net6.0-windows10.0.19041": {
-            "targetAlias": "net6.0-windows10.0.19041.0",
+            "targetAlias": "net6.0-windows10.0.19041",
             "projectReferences": {}
           }
         },
@@ -42,7 +42,7 @@
       },
       "frameworks": {
         "net6.0-windows10.0.19041": {
-          "targetAlias": "net6.0-windows10.0.19041.0",
+          "targetAlias": "net6.0-windows10.0.19041",
           "dependencies": {
             "FontAwesome6.Svg": {
               "target": "Package",

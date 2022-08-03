@@ -3,7 +3,13 @@
   <PropertyGroup>
     <_LastSelectedProfileId>C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Properties\PublishProfiles\FolderProfile1.pubxml</_LastSelectedProfileId>
     <DeployOptionalPackages>False</DeployOptionalPackages>
+    <AppIconSource>C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\focus-on-the-good.png</AppIconSource>
   </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Update="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
   <ItemGroup>
     <None Update="App.xaml">
       <SubType>Designer</SubType>
