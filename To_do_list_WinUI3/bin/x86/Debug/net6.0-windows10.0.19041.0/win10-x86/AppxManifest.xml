@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="60542KelvinJoelPiaSledzin.FocusOne" Publisher="CN=Kelvin Piña Sledzinski" Version="1.0.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="60542KelvinJoelPiaSledzin.FocusOne" Publisher="CN=Kelvin Joel Piña Sledzinski" Version="1.0.0.0" ProcessorArchitecture="x86" />
   <Properties>
     <DisplayName>FocusOne</DisplayName>
     <PublisherDisplayName>Kelvin Joel Piña Sledzinski</PublisherDisplayName>
@@ -23,7 +23,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="To_do_list_WinUI3.exe" EntryPoint="Windows.FullTrustApplication">
-      <uap:VisualElements DisplayName="Focus One" Description="To do list app  Focus on one task and  block apps" BackgroundColor="transparent" Square150x150Logo="Assets\focus.png" Square44x44Logo="Assets\ftarget.png">
+      <uap:VisualElements DisplayName="FocusOne" Description="To do list app  Focus on one task and  block apps" BackgroundColor="transparent" Square150x150Logo="Assets\focus.png" Square44x44Logo="Assets\ftarget.png">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\target (1).png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />

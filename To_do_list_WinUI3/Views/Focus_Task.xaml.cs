@@ -12,6 +12,7 @@ using Windows.System.Diagnostics;
 using To_do_list_WinUI3.Views;
 using to_do_list_WinUI3;
 using Windows.UI.Core;
+using System.Text.RegularExpressions;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -52,7 +53,7 @@ namespace To_do_list_WinUI3.Views
         {
 
             // Get the minutes and hours 
-            TimeSpan time = new TimeSpan(int.Parse(Hours_Combobox.Text), int.Parse(Minutes_combobox.Text), 0);
+            TimeSpan time = new TimeSpan(int.Parse(hours_textbox.Text), int.Parse(minutes_textbox.Text), 0);
                   
            //Update the variable in app.cs BlockTime to be able to share data between pages 
             (App.Current as App).blockTime = time;
@@ -84,6 +85,24 @@ namespace To_do_list_WinUI3.Views
             var m_window = new MainWindow();
             m_window.Activate();
             this.Close();
+        }
+
+        private void Hours_Combobox_TextSubmitted(ComboBox sender, ComboBoxTextSubmittedEventArgs args)
+        {
+            Regex NumberRegex = new Regex(@"^\d+$");
+            if (!NumberRegex.IsMatch(args.Text))
+            {
+                Debug.WriteLine("text");
+                sender.Text = "00";
+               
+            }
+
+        }
+        private void TimerTextbox_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
+        {
+            // only numbers in textbox
+            args.Cancel = args.NewText.Any(c => !char.IsNumber(c));
+
         }
 
 

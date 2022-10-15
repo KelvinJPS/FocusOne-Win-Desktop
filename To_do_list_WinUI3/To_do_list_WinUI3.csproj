@@ -88,9 +88,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <DesignData Remove="Package.appxmanifest" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppxManifest Include="Package.appxmanifest" />
+    <DesignData Include="Package.appxmanifest" />
   </ItemGroup>
 </Project>

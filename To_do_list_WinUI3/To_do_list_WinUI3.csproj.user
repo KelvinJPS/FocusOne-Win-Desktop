@@ -6,9 +6,9 @@
     <AppIconSource>C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\Assets\focus-on-the-good.png</AppIconSource>
   </PropertyGroup>
   <ItemGroup>
-    <AppxManifest Update="Package.appxmanifest">
+    <DesignData Update="Package.appxmanifest">
       <SubType>Designer</SubType>
-    </AppxManifest>
+    </DesignData>
   </ItemGroup>
   <ItemGroup>
     <None Update="App.xaml">

@@ -2463,7 +2463,7 @@
       },
       "frameworks": {
         "net6.0-windows10.0.19041": {
-          "targetAlias": "net6.0-windows10.0.19041",
+          "targetAlias": "net6.0-windows10.0.19041.0",
           "projectReferences": {}
         }
       },
@@ -2475,7 +2475,7 @@
     },
     "frameworks": {
       "net6.0-windows10.0.19041": {
-        "targetAlias": "net6.0-windows10.0.19041",
+        "targetAlias": "net6.0-windows10.0.19041.0",
         "dependencies": {
           "FontAwesome6.Svg": {
             "target": "Package",
@@ -2523,10 +2523,6 @@
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-            "version": "[6.0.7, 6.0.7]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
             "version": "[6.0.7, 6.0.7]"
           },
           {

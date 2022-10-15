@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>60542KelvinJoelPiaSledzin.FocusOne</PackageIdentityName>
-    <PackageIdentityPublisher>CN=Kelvin Piña Sledzinski</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=Kelvin Joel Piña Sledzinski</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>

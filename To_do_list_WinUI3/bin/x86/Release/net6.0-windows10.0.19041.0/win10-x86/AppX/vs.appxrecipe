@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Release\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-08-03T15:24:14.552</Modified>
+      <Modified>2022-10-15T13:08:31.849</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Release\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-08-03T15:23:50.962</Modified>
+      <Modified>2022-08-03T15:56:31.562</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Release\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.runtimeconfig.json">
       <PackagePath>To_do_list_WinUI3.runtimeconfig.json</PackagePath>
-      <Modified>2022-08-03T15:23:50.902</Modified>
+      <Modified>2022-08-03T15:56:31.287</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Release\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>To_do_list_WinUI3.exe</PackagePath>
-      <Modified>2022-08-03T15:23:50.712</Modified>
+      <Modified>2022-10-15T13:06:36.452</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Release\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.deps.json">
       <PackagePath>To_do_list_WinUI3.deps.json</PackagePath>
-      <Modified>2022-08-03T15:23:50.899</Modified>
+      <Modified>2022-08-03T15:56:30.748</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\.nuget\packages\microsoft.netcore.app.runtime.win-x86\6.0.7\runtimes\win-x86\native\API-MS-Win-core-xstate-l2-1-0.dll">
       <PackagePath>API-MS-Win-core-xstate-l2-1-0.dll</PackagePath>
@@ -1027,7 +1027,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Release\net6.0-windows10.0.19041.0\win10-x86\R2R\To_do_list_WinUI3.dll">
       <PackagePath>To_do_list_WinUI3.dll</PackagePath>
-      <Modified>2022-08-03T15:23:51.732</Modified>
+      <Modified>2022-10-15T13:06:42.695</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Release\net6.0-windows10.0.19041.0\win10-x86\R2R\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

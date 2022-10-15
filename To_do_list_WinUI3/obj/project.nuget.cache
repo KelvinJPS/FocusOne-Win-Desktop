@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xp8LP3DVKMPyvcuPda73whIN+NMC91GcR3Hn+uyfalmryZWBxCTZdvKQ2uz6Q2nej3RSTeO21286FrW92yPtsQ==",
+  "dgSpecHash": "8t5J0xQWYkXiL//JuRct8m/SCsXgrjB5eANI5Dewz+LyE2t50Xov6rBiU/uFyg+vIydkvArmqjCYYYotnNhCXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kelvin\\source\\repos\\To_do_list_WinUI3\\To_do_list_WinUI3\\To_do_list_WinUI3.csproj",
   "expectedPackageFiles": [
@@ -24,17 +24,16 @@
     "C:\\Users\\Kelvin\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Kelvin\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Kelvin\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
-    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.7\\microsoft.netcore.app.runtime.win-x86.6.0.7.nupkg.sha512",
     "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.7\\microsoft.netcore.app.runtime.win-x64.6.0.7.nupkg.sha512",
+    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.7\\microsoft.aspnetcore.app.runtime.win-x64.6.0.7.nupkg.sha512",
     "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\6.0.7\\microsoft.netcore.app.runtime.win-arm64.6.0.7.nupkg.sha512",
-    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.7\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.7.nupkg.sha512",
     "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.7\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.7.nupkg.sha512",
+    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.26\\microsoft.windows.sdk.net.ref.10.0.19041.26.nupkg.sha512",
+    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\6.0.7\\microsoft.aspnetcore.app.runtime.win-arm64.6.0.7.nupkg.sha512",
+    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.7\\microsoft.netcore.app.runtime.win-x86.6.0.7.nupkg.sha512",
     "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\6.0.7\\microsoft.windowsdesktop.app.runtime.win-arm64.6.0.7.nupkg.sha512",
     "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.7\\microsoft.aspnetcore.app.runtime.win-x86.6.0.7.nupkg.sha512",
-    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.7\\microsoft.aspnetcore.app.runtime.win-x64.6.0.7.nupkg.sha512",
-    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\6.0.7\\microsoft.aspnetcore.app.runtime.win-arm64.6.0.7.nupkg.sha512",
-    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\6.0.7\\microsoft.netcore.app.crossgen2.win-x64.6.0.7.nupkg.sha512",
-    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.26\\microsoft.windows.sdk.net.ref.10.0.19041.26.nupkg.sha512"
+    "C:\\Users\\Kelvin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.7\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.7.nupkg.sha512"
   ],
   "logs": []
 }

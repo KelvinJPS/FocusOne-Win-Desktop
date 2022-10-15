@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>60542KelvinJoelPiaSledzin.FocusOne</PackageIdentityName>
-    <PackageIdentityPublisher>CN=Kelvin Piña Sledzinski</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=Kelvin Joel Piña Sledzinski</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,40 +18,40 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppX</LayoutDir>
-    <RegisteredManifestChecksum>218A712B85685DFFCE099F4288F806A394809FA38F7BD16A0EC5B396AA8C06D1</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>60542KelvinJoelPiaSledzin.FocusOne_1.0.0.0_x86__34h2edccstggy</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>60542KelvinJoelPiaSledzin.FocusOne_34h2edccstggy!App</RegisteredUserModeAppID>
+    <RegisteredManifestChecksum>DF9359C0966471E1A4D5BB7889816C82DC84C3A5582B7FF61918C2F3A12813CE</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>60542KelvinJoelPiaSledzin.FocusOne_1.0.0.0_x86__ejrn0bfj4gk3g</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>60542KelvinJoelPiaSledzin.FocusOne_ejrn0bfj4gk3g!App</RegisteredUserModeAppID>
     <RegisteredPackageID>60542KelvinJoelPiaSledzin.FocusOne</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=Kelvin Piña Sledzinski</RegisteredPackagePublisher>
+    <RegisteredPackagePublisher>CN=Kelvin Joel Piña Sledzinski</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-08-02T23:17:27.132</Modified>
+      <Modified>2022-10-15T13:56:16.136</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-08-02T23:17:26.886</Modified>
+      <Modified>2022-10-15T13:56:15.907</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.runtimeconfig.json">
       <PackagePath>To_do_list_WinUI3.runtimeconfig.json</PackagePath>
-      <Modified>2022-08-02T23:17:26.789</Modified>
+      <Modified>2022-10-15T13:31:09.710</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.dll">
       <PackagePath>To_do_list_WinUI3.dll</PackagePath>
-      <Modified>2022-08-02T05:01:51.855</Modified>
+      <Modified>2022-10-15T13:56:15.776</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>To_do_list_WinUI3.exe</PackagePath>
-      <Modified>2022-08-02T05:01:51.874</Modified>
+      <Modified>2022-10-15T13:56:15.782</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\source\repos\To_do_list_WinUI3\To_do_list_WinUI3\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\To_do_list_WinUI3.deps.json">
       <PackagePath>To_do_list_WinUI3.deps.json</PackagePath>
-      <Modified>2022-08-02T23:17:26.682</Modified>
+      <Modified>2022-10-15T13:31:09.707</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kelvin\.nuget\packages\microsoft.netcore.app.runtime.win-x86\6.0.7\runtimes\win-x86\lib\net6.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

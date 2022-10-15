@@ -61,30 +61,9 @@
             </TextBlock>
 
             <StackPanel  Orientation="Horizontal">
-            
-             <TextBlock Text="Set Timer for  "  ></TextBlock>
 
-                <ComboBox x:ConnectionId='5' Name="Hours_Combobox" Text="00" IsEditable="True" >
-
-                    <ComboBoxItem Content="1"></ComboBoxItem>
-                    <ComboBoxItem Content="2"></ComboBoxItem>
-                    <ComboBoxItem Content="3"></ComboBoxItem>
-                    <ComboBoxItem Content="4"></ComboBoxItem>
-
-                </ComboBox>
-
-                <TextBlock  Text=" Hours " ></TextBlock>
-
-                <ComboBox x:ConnectionId='6' Name="Minutes_combobox"  IsEditable="True" Text="00"  >
-                <ComboBoxItem Content="5"></ComboBoxItem>
-                <ComboBoxItem Content="15"></ComboBoxItem>
-                <ComboBoxItem Content="30"></ComboBoxItem>
-                <ComboBoxItem Content="45"></ComboBoxItem>
-                <ComboBoxItem Content="60"></ComboBoxItem>
-            </ComboBox>
-
-                <TextBlock Text=" minutes  " ></TextBlock>
-
+                <TextBox x:ConnectionId='5' Name="hours_textbox" PlaceholderText="Minutes"                                                      ></TextBox>
+                <TextBox x:ConnectionId='6' Name="minutes_textbox" PlaceholderText="Hours"                                                      ></TextBox>
             </StackPanel>
 
          
