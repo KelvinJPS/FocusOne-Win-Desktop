@@ -98,21 +98,22 @@
 
 
         <ListView x:ConnectionId='4' Name="task_list"                                 IsItemClickEnabled="True" Grid.Row="0" Grid.Column="1"  Background="Transparent"
-                  Padding="15" Margin="25,0,0,0"                                                   >
-         
-            
+                  Padding="15" Margin="25,0,0,0"                                                 
+                  >
+
+
             <ListView.HeaderTemplate>
                 <DataTemplate                       >
                     <TextBlock x:ConnectionId='59'  FontSize="30" HorizontalAlignment="Center"                 ></TextBlock>
                 </DataTemplate>
             </ListView.HeaderTemplate>
 
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate > 
 
                 <DataTemplate                            >
                   
                  
-                    <RelativePanel  >
+                    <RelativePanel x:ConnectionId='61' Name="task_relativepanel"                                         >
                         <RadioButton x:ConnectionId='62'  Name="Circle"  RelativePanel.AlignLeftWithPanel="True"
                                       Style="{StaticResource RadioButtonStyle1}"
                                                               >
@@ -144,6 +145,7 @@
             </ListView.ItemContainerStyle>
         </ListView>
 
+        
         <StackPanel x:ConnectionId='5' Name="TaskForm"  Grid.Column="2" Width="340" Background="#04000E" HorizontalAlignment="Right" Visibility="Collapsed" >
             <Button x:ConnectionId='6' FontSize="20" Name="quit_TaskForm" Content="x"                             HorizontalAlignment="Right" Background="Transparent"></Button>
 
@@ -458,7 +460,15 @@
                      HorizontalAlignment="Center" Margin="0,30,0,0"  Name="descriptions_textbox"                                                 PlaceholderText="Add a note" Width="300" TextWrapping="Wrap"></TextBox>
 
         </StackPanel>
-
+        <Rectangle
+  Height="100" Width="100">
+            <Rectangle.ContextFlyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem Text="Change color"/>
+                </MenuFlyout>
+            </Rectangle.ContextFlyout>
+            
+        </Rectangle>
 
     </Grid>
 

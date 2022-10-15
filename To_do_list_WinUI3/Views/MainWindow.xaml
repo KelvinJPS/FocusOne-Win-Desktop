@@ -98,21 +98,22 @@
 
 
         <ListView Name="task_list" ItemClick="task_list_ItemClick" IsItemClickEnabled="True" Grid.Row="0" Grid.Column="1"  Background="Transparent"
-                  Padding="15" Margin="25,0,0,0"  SelectionChanged="task_list_SelectionChanged"    >
-         
-            
+                  Padding="15" Margin="25,0,0,0"  SelectionChanged="task_list_SelectionChanged"  
+                  >
+
+
             <ListView.HeaderTemplate>
                 <DataTemplate  x:DataType="x:String">
                     <TextBlock  FontSize="30" HorizontalAlignment="Center" Text="{x:Bind }"></TextBlock>
                 </DataTemplate>
             </ListView.HeaderTemplate>
 
-            <ListView.ItemTemplate>
+            <ListView.ItemTemplate > 
 
                 <DataTemplate x:DataType="local:TaskTodo">
                   
                  
-                    <RelativePanel  >
+                    <RelativePanel Name="task_relativepanel" GotFocus="task_relativepanel_GotFocus"  >
                         <RadioButton  Name="Circle"  RelativePanel.AlignLeftWithPanel="True"
                                       Style="{StaticResource RadioButtonStyle1}"
                                       Checked="Circle_Checked">
@@ -129,6 +130,14 @@
                             
 
                         </Button>
+
+                        <RelativePanel.ContextFlyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem Text="Delete Task"></MenuFlyoutItem>
+                                <MenuFlyoutItem Text="Delete Move task to"></MenuFlyoutItem>
+                                <MenuFlyoutItem Text="Mark as completed"></MenuFlyoutItem>
+                            </MenuFlyout>
+                        </RelativePanel.ContextFlyout>
                     </RelativePanel>
                   
                  
@@ -144,6 +153,7 @@
             </ListView.ItemContainerStyle>
         </ListView>
 
+        
         <StackPanel Name="TaskForm"  Grid.Column="2" Width="340" Background="#04000E" HorizontalAlignment="Right" Visibility="Collapsed" >
             <Button FontSize="20" Name="quit_TaskForm" Content="x" Click="quit_TaskForm_Click" HorizontalAlignment="Right" Background="Transparent"></Button>
 
@@ -458,7 +468,7 @@
                      HorizontalAlignment="Center" Margin="0,30,0,0"  Name="descriptions_textbox"  TextChanged="descriptions_textbox_TextChanged" PlaceholderText="Add a note" Width="300" TextWrapping="Wrap"></TextBox>
 
         </StackPanel>
-
+      
 
     </Grid>
 

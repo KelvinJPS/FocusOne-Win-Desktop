@@ -624,6 +624,10 @@ namespace To_do_list_WinUI3
             SubTasks.Remove(item);
         }
 
+        private void task_relativepanel_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 
