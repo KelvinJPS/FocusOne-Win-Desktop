@@ -130,6 +130,14 @@
                             
 
                         </Button>
+
+                        <RelativePanel.ContextFlyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem Text="Delete Task"></MenuFlyoutItem>
+                                <MenuFlyoutItem Text="Delete Move task to"></MenuFlyoutItem>
+                                <MenuFlyoutItem Text="Mark as completed"></MenuFlyoutItem>
+                            </MenuFlyout>
+                        </RelativePanel.ContextFlyout>
                     </RelativePanel>
                   
                  
@@ -460,15 +468,7 @@
                      HorizontalAlignment="Center" Margin="0,30,0,0"  Name="descriptions_textbox"                                                 PlaceholderText="Add a note" Width="300" TextWrapping="Wrap"></TextBox>
 
         </StackPanel>
-        <Rectangle
-  Height="100" Width="100">
-            <Rectangle.ContextFlyout>
-                <MenuFlyout>
-                    <MenuFlyoutItem Text="Change color"/>
-                </MenuFlyout>
-            </Rectangle.ContextFlyout>
-            
-        </Rectangle>
+      
 
     </Grid>
 

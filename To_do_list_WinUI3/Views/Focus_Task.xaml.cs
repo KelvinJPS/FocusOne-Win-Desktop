@@ -51,12 +51,9 @@ namespace To_do_list_WinUI3.Views
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-
-            // Get the minutes and hours 
-            TimeSpan time = new TimeSpan(int.Parse(hours_textbox.Text), int.Parse(minutes_textbox.Text), 0);
                   
            //Update the variable in app.cs BlockTime to be able to share data between pages 
-            (App.Current as App).blockTime = time;
+            (App.Current as App).blockTime = GetBlockingTime(hours_textbox.Text,minutes_textbox.Text);
 
             //Update the variable in app.cs Useful apps to be able to share data between pages 
             (App.Current as App).UsefulApps = UsefulApps;
@@ -67,7 +64,14 @@ namespace To_do_list_WinUI3.Views
             this.Close(); ; //close the window 
 
          }
-
+        private TimeSpan GetBlockingTime (string shours, string sminutes)
+        {             
+            int.TryParse(shours, out int hours);
+            int.TryParse(sminutes, out int minutes);    
+          
+            return  new TimeSpan(hours, minutes, 0);
+          
+        }
         private void ListView_Apps_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UsefulApps.Clear();
@@ -101,7 +105,7 @@ namespace To_do_list_WinUI3.Views
         private void TimerTextbox_BeforeTextChanging(TextBox sender, TextBoxBeforeTextChangingEventArgs args)
         {
             // only numbers in textbox
-            args.Cancel = args.NewText.Any(c => !char.IsNumber(c));
+            args.Cancel = args.NewText.Any(c => !char.IsNumber(c)); 
 
         }
 

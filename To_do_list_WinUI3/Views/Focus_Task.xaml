@@ -62,8 +62,8 @@
 
             <StackPanel  Orientation="Horizontal">
 
-                <TextBox Name="hours_textbox" PlaceholderText="Minutes"  BeforeTextChanging="TimerTextbox_BeforeTextChanging"></TextBox>
-                <TextBox Name="minutes_textbox" PlaceholderText="Hours" BeforeTextChanging="TimerTextbox_BeforeTextChanging" ></TextBox>
+                <TextBox Name="hours_textbox" PlaceholderText="Hours"  BeforeTextChanging="TimerTextbox_BeforeTextChanging" ></TextBox>
+                <TextBox Name="minutes_textbox" PlaceholderText="Minutes" BeforeTextChanging="TimerTextbox_BeforeTextChanging"></TextBox>
             </StackPanel>
 
          

@@ -62,8 +62,8 @@
 
             <StackPanel  Orientation="Horizontal">
 
-                <TextBox x:ConnectionId='5' Name="hours_textbox" PlaceholderText="Minutes"                                                      ></TextBox>
-                <TextBox x:ConnectionId='6' Name="minutes_textbox" PlaceholderText="Hours"                                                      ></TextBox>
+                <TextBox x:ConnectionId='5' Name="hours_textbox" PlaceholderText="Hours"                                                       ></TextBox>
+                <TextBox x:ConnectionId='6' Name="minutes_textbox" PlaceholderText="Minutes"                                                     ></TextBox>
             </StackPanel>
 
          
